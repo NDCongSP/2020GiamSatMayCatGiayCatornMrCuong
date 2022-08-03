@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HDSDK_Demo_VB", "HDSDK_Demo_VB.vbproj", "{3CA428B1-EA62-4815-A54C-45E9C5BD3643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CA428B1-EA62-4815-A54C-45E9C5BD3643}.Debug|x86.ActiveCfg = Debug|x86
+		{3CA428B1-EA62-4815-A54C-45E9C5BD3643}.Debug|x86.Build.0 = Debug|x86
+		{3CA428B1-EA62-4815-A54C-45E9C5BD3643}.Release|x86.ActiveCfg = Release|x86
+		{3CA428B1-EA62-4815-A54C-45E9C5BD3643}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

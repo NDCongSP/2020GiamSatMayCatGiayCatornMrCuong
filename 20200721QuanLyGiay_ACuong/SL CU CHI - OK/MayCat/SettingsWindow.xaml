@@ -1,0 +1,34 @@
+﻿<Window
+    x:Class="MayCat.SettingsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Cài đặt"
+    Width="1100"
+    Height="700"
+    WindowStartupLocation="CenterOwner"
+    mc:Ignorable="d">
+    <TabControl
+        x:Name="tabControl"
+        Margin="4"
+        FontSize="14"
+        Style="{StaticResource BlueTabControl}">
+        <TabItem Header="MÁY XẢ 1 (F1)">
+            <local:CaiDatMayCat x:Name="may1" />
+        </TabItem>
+
+        <TabItem Header="MÁY XẢ 2 (F2)">
+            <local:CaiDatMayCat x:Name="may2" />
+        </TabItem>
+
+        <TabItem Header="KHE HỞ LẰNG (F3)">
+            <local:CaiDatKheHoLang />
+        </TabItem>
+
+        <TabItem Header="SETTINGS (F4)">
+            <local:CaiDatSettings />
+        </TabItem>
+    </TabControl>
+</Window>

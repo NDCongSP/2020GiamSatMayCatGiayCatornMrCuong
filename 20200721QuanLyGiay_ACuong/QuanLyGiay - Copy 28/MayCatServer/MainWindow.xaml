@@ -1,0 +1,177 @@
+﻿<Window
+    x:Class="MayCatServer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CommonControls="clr-namespace:CommonControls;assembly=CommonControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCatServer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="CUTTER PC SERVER"
+    Width="1366"
+    Height="768"
+    mc:Ignorable="d">
+
+    <Grid Background="#FFAEAEAA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="261" />
+            <RowDefinition Height="112" />
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="440" />
+            </Grid.ColumnDefinitions>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <local:DonHangDangChay
+                    x:Name="donHangChuanBi"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+                <Label
+                    x:Name="lbSoMetToi"
+                    VerticalContentAlignment="Center"
+                    Content="Số mét tới đã chạy: "
+                    FontSize="22"
+                    FontWeight="SemiBold"
+                    Foreground="DarkBlue" />
+            </Grid>
+            <CommonControls:StationInfo
+                x:Name="thongTinCacTram"
+                Grid.Column="1"
+                Margin="0,10,10,10"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <CommonControls:TrangThaiDonHangDangChay x:Name="donHangDangChay" Margin="10,0,10,10">
+                <CommonControls:TrangThaiDonHangDangChay.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Click="KetThucCa_Click" Header="Kết Thúc Ca" />
+                    </ContextMenu>
+                </CommonControls:TrangThaiDonHangDangChay.ContextMenu>
+            </CommonControls:TrangThaiDonHangDangChay>
+        </Grid>
+        <Grid Grid.Row="2">
+            <CommonControls:DanhSachDonHang x:Name="danhSachDonHang" Margin="10,0,10,10">
+                <CommonControls:DanhSachDonHang.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Cập nhật đơn hàng" Click="MenuItem_Click"/>
+                    </ContextMenu>
+                </CommonControls:DanhSachDonHang.ContextMenu>
+            </CommonControls:DanhSachDonHang>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnDonHang"
+                Grid.Column="0"
+                Width="130"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F1 / Đơn hàng"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <Button
+                x:Name="btnTangGiamLoi"
+                Grid.Column="1"
+                Width="130"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F2 / +/- Lỗi"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Button
+                x:Name="btnBaoCao"
+                Grid.Column="2"
+                Width="130"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F3 / Báo cáo"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Button
+                x:Name="btnCaiDat"
+                Grid.Column="3"
+                Width="130"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F4 / Cài đặt"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Button
+                x:Name="btnNapMayXa"
+                Grid.Column="4"
+                Width="140"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F5 / Nạp Máy Xả"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Button
+                x:Name="btnInDon"
+                Grid.Column="5"
+                Width="140"
+                Height="40"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Click="btnInDon_Click"
+                Content="F6 / In Đơn"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Label
+                x:Name="lbChuyenDon"
+                Grid.Column="6"
+                Width="190"
+                Height="40"
+                Margin="0,0,10,10"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="Blue"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+
+        </Grid>
+    </Grid>
+
+</Window>

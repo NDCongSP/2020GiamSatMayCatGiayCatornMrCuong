@@ -1,0 +1,1477 @@
+﻿<Window
+    x:Class="MayCatServer.DonHangForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:CommonControls;assembly=CommonControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCatServer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Đơn hàng"
+    Width="1366"
+    Height="608.104"
+    Background="#FFAEAEAA"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <control:FirstRowToRedForegroundConverter x:Key="FirstRowToRedForegroundConverter" />
+        <Style TargetType="DataGridCell">
+            <Setter Property="IsEditing" Value="False" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--<BorderGapMaskConverter x:Key="BorderGapMaskConverter" />
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="#D5DFE5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type GroupBox}">
+                        <Grid SnapsToDevicePixels="true">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="6" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="6" />
+                            </Grid.RowDefinitions>
+                            <Border
+                                Grid.Row="1"
+                                Grid.RowSpan="3"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="4"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="Transparent"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4" />
+                            <Border
+                                Grid.Row="1"
+                                Grid.RowSpan="3"
+                                Grid.ColumnSpan="4"
+                                BorderBrush="Transparent"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                                <Border.OpacityMask>
+                                    <MultiBinding Converter="{StaticResource BorderGapMaskConverter}" ConverterParameter="7">
+                                        <Binding ElementName="Header" Path="ActualWidth" />
+                                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource Self}" />
+                                        <Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}" />
+                                    </MultiBinding>
+                                </Border.OpacityMask>
+                                <Border
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="3">
+                                    <Border
+                                        BorderBrush="Transparent"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="2" />
+                                </Border>
+                            </Border>
+                            <Border
+                                x:Name="Header"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                Padding="3,1,3,0">
+                                <ContentPresenter
+                                    ContentSource="Header"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                            <ContentPresenter
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Margin="{TemplateBinding Padding}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox
+            x:Name="groupBox"
+            Height="210"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            BorderBrush="Gray"
+            Header="Thông tin đơn hàng">
+            <GroupBox.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                </Style>
+            </GroupBox.Resources>
+            <Grid x:Name="grid" Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90*" />
+                    <ColumnDefinition Width="1121*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="STT: " />
+                <TextBox
+                    x:Name="txbSTT"
+                    Grid.ColumnSpan="2"
+                    Width="132"
+                    Height="22"
+                    Margin="58,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TabIndex="0"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <TextBox
+                    x:Name="txbKho"
+                    Grid.ColumnSpan="2"
+                    Width="132"
+                    Height="22"
+                    Margin="58,94,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TabIndex="3"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <ComboBox
+                    x:Name="cobGiayMen"
+                    Grid.Column="1"
+                    Width="111"
+                    Height="22"
+                    Margin="543,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="12"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobMa"
+                    Grid.ColumnSpan="2"
+                    Width="132"
+                    Margin="58,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True"
+                    TabIndex="1" />
+                <Label
+                    Margin="10,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mã: " />
+                <Label
+                    Margin="10,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Sóng: " />
+                <ComboBox
+                    x:Name="cobSong"
+                    Grid.ColumnSpan="2"
+                    Width="132"
+                    Margin="58,66,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True"
+                    TabIndex="2" />
+                <Label
+                    Margin="10,92,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Khổ: "
+                    RenderTransformOrigin="-0.216,0.808" />
+                <Label
+                    Grid.Column="1"
+                    Margin="463,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Mền: " />
+                <Label
+                    Grid.Column="1"
+                    Margin="463,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Sóng 1: " />
+                <Label
+                    Grid.Column="1"
+                    Margin="463,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Mặt 1: " />
+                <Label
+                    Grid.Column="1"
+                    Margin="666,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Sóng 2: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <Label
+                    Grid.Column="1"
+                    Margin="666,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Mặt 2: " />
+                <Label
+                    Grid.Column="1"
+                    Margin="666,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Sóng 3: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <Label
+                    Grid.Column="1"
+                    Margin="666,92,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Giấy Mặt 3: " />
+                <ComboBox
+                    x:Name="cobGiaySongE"
+                    Grid.Column="1"
+                    Width="111"
+                    Height="22"
+                    Margin="543,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="13"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobGiayMatE"
+                    Grid.Column="1"
+                    Width="111"
+                    Height="24"
+                    Margin="543,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="14"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobGiaySongB"
+                    Grid.Column="1"
+                    Width="100"
+                    Height="22"
+                    Margin="762,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="15"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobGiayMatB"
+                    Grid.Column="1"
+                    Width="100"
+                    Height="22"
+                    Margin="762,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="16"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobGiaySongC"
+                    Grid.Column="1"
+                    Width="100"
+                    Height="24"
+                    Margin="762,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="17"
+                    Text="" />
+                <ComboBox
+                    x:Name="cobGiayMatC"
+                    Grid.Column="1"
+                    Width="100"
+                    Height="22"
+                    Margin="762,94,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    IsEditable="True"
+                    TabIndex="18"
+                    Text="" />
+                <Label
+                    Grid.Column="1"
+                    Margin="109.102,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Dài: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbDai"
+                    Grid.Column="1"
+                    Width="103"
+                    Height="22"
+                    Margin="183,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="4"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="109,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Số lượng: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbSoLuong"
+                    Grid.Column="1"
+                    Width="103"
+                    Height="22"
+                    Margin="183,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="5"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="109,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Pallet: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbPallet"
+                    Grid.Column="1"
+                    Width="103"
+                    Height="24"
+                    Margin="183,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="6"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="109,92,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Xả: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbXa"
+                    Grid.Column="1"
+                    Width="103"
+                    Height="22"
+                    Margin="183,94,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="7"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="293,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Nắp: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbRong"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="348,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="8"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="293,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Cao: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbCanh"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="24"
+                    Margin="348,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="10"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="293,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Nắp: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbCao"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="22"
+                    Margin="348,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="9"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="293,92,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Lằng: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbLang"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="348,94,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="11"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Button
+                    x:Name="btnThem"
+                    Grid.Column="1"
+                    Width="99"
+                    Height="33"
+                    Margin="302,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="F1/Thêm"
+                    FontSize="16"
+                    TabIndex="29" />
+                <Button
+                    x:Name="btnSua"
+                    Grid.Column="1"
+                    Width="98"
+                    Height="33"
+                    Margin="408,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="F2/Sửa"
+                    FontSize="16"
+                    TabIndex="30" />
+                <Button
+                    x:Name="btnXoa"
+                    Grid.Column="1"
+                    Width="99"
+                    Height="33"
+                    Margin="513,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Del/Xóa"
+                    FontSize="16"
+                    TabIndex="31" />
+                <Button
+                    x:Name="btnLuu"
+                    Grid.Column="1"
+                    Width="99"
+                    Height="33"
+                    Margin="618,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Enter/Lưu"
+                    FontSize="16"
+                    TabIndex="32" />
+                <Button
+                    x:Name="btnHuy"
+                    Grid.Column="1"
+                    Width="99"
+                    Height="33"
+                    Margin="722,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Esc/Hủy"
+                    FontSize="16"
+                    IsTabStop="True"
+                    TabIndex="33" />
+
+                <TextBox
+                    x:Name="txbGhiChu"
+                    Grid.ColumnSpan="2"
+                    Width="228"
+                    Height="55"
+                    Margin="58,126,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    TabIndex="34"
+                    TextWrapping="Wrap" />
+                <Label
+                    Margin="-3,130,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Ghi chú: "
+                    RenderTransformOrigin="-0.216,0.808" />
+                <Button
+                    x:Name="btnClear"
+                    Grid.Column="1"
+                    Width="99"
+                    Height="33"
+                    Margin="198,139,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Xóa tất cả"
+                    FontSize="16"
+                    TabIndex="28" />
+                <Label
+                    Grid.Column="1"
+                    Margin="870,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="KH: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbKH"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="925,12,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="19"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="870,37,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Dài: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbRongGiay"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="24"
+                    Margin="925,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="21"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="870,64,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Rộng: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbDaiGiay"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="22"
+                    Margin="925,39,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="20"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="870,92,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Cao: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbCaoGiay"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="925,94,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="22"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1036,11,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="ĐH: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbDonHang"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="1104,13,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="23"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1036,38,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="PO: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbMayIn"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="24"
+                    Margin="1104,66,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="25"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1036,65,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Máy In: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbPO"
+                    Grid.Column="1"
+                    Width="105"
+                    Height="22"
+                    Margin="1104,40,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="24"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1036,93,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Chạp/Bế: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbChapBe"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="1104,95,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="26"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1036,121,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Ghim/Dán: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbGhimDan"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="1104,123,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="27"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="1037,149,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Line: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbLine"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="1105,151,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="27"
+                    Text=""
+                    TextWrapping="Wrap" />
+                <Label
+                    Grid.Column="1"
+                    Margin="870,121,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Máy Xả: "
+                    RenderTransformOrigin="1.873,1.5" />
+                <TextBox
+                    x:Name="txbMayXa"
+                    Grid.Column="1"
+                    Width="104"
+                    Height="22"
+                    Margin="925,123,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    AutomationProperties.IsRequiredForForm="True"
+                    TabIndex="22"
+                    Text=""
+                    TextWrapping="Wrap" />
+
+            </Grid>
+        </GroupBox>
+        <GroupBox
+            x:Name="groupBox1"
+            Grid.Row="1"
+            Margin="10,10,10,10"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="#FFAEAEAA"
+            BorderBrush="Gray"
+            Header="Danh sách đơn hàng">
+            <DataGrid
+                x:Name="dataGrid"
+                Margin="4,6,4,4"
+                AllowDrop="False"
+                AlternatingRowBackground="#FFD7DDE6"
+                AutoGenerateColumns="False"
+                Background="White"
+                BeginningEdit="DataGrid_BeginningEdit"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                CanUserReorderColumns="False"
+                CanUserResizeColumns="False"
+                CanUserResizeRows="False"
+                CanUserSortColumns="False"
+                IsTabStop="True"
+                RowBackground="White"
+                RowHeaderWidth="0"
+                RowHeight="34"
+                SelectionChanged="DataGrid_SelectionChanged"
+                SelectionMode="Single"
+                SelectionUnit="FullRow">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Width="80*"
+                        Binding="{Binding STT}"
+                        FontSize="12"
+                        Header="STT">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="IsEditing" Value="False" />
+                                <Setter Property="Foreground" Value="{Binding Converter={StaticResource FirstRowToRedForegroundConverter}}" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                            <Grid
+                                                HorizontalAlignment="Stretch"
+                                                VerticalAlignment="Stretch"
+                                                Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="107*"
+                        Binding="{Binding Ma}"
+                        FontSize="12"
+                        Header="Mã">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="28" />
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Song}"
+                        FontSize="12"
+                        Header="Sóng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="53*"
+                        Binding="{Binding Kho}"
+                        FontSize="12"
+                        Header="Khổ">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding Men}"
+                        FontSize="12"
+                        Header="Mền">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiaySongE}"
+                        FontSize="12"
+                        Header="Sóng 1">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiayMatE}"
+                        FontSize="12"
+                        Header="Mặt 1">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiaySongB}"
+                        FontSize="12"
+                        Header="Sóng 2">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiayMatB}"
+                        FontSize="12"
+                        Header="Mặt 2">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiaySongC}"
+                        FontSize="12"
+                        Header="Sóng 3">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60*"
+                        Binding="{Binding GiayMatC}"
+                        FontSize="12"
+                        Header="Mặt 3">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Dai}"
+                        FontSize="12"
+                        Header="Dài">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding SL}"
+                        FontSize="12"
+                        Header="S.L">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="64*"
+                        Binding="{Binding Tong, StringFormat=f0}"
+                        FontSize="12"
+                        Header="Tổng"
+                        IsReadOnly="True">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Pallet}"
+                        FontSize="12"
+                        Header="Pallet">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Xa}"
+                        FontSize="12"
+                        Header="Xả">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Rong}"
+                        FontSize="12"
+                        Header="Nắp">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Cao}"
+                        FontSize="12"
+                        Header="Cao">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Canh}"
+                        FontSize="12"
+                        Header="Nắp">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Lang}"
+                        FontSize="12"
+                        Header="Lằng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding MayXa}"
+                        FontSize="12"
+                        Header="Máy Xả">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54*"
+                        Binding="{Binding Line}"
+                        FontSize="12"
+                        Header="Line">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="106*"
+                        Binding="{Binding GhiChu}"
+                        FontSize="12"
+                        Header="Ghi chú">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="White"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFF0000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <!--
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="{Binding  Converter={StaticResource FirstRowToRedForegroundConverter}}"/>
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                        <Grid Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid Margin="0 2">
+                                                <TextBlock Text="{Binding Path=GhiChu}" Padding="4" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                        -->
+                    </DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+    </Grid>
+</Window>

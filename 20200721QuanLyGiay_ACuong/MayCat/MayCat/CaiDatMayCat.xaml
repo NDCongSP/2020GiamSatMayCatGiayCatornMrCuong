@@ -1,0 +1,712 @@
+﻿<UserControl
+    x:Class="MayCat.CaiDatMayCat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    d:DesignHeight="600"
+    d:DesignWidth="1068"
+    mc:Ignorable="d">
+    <mvvm:Interaction.Behaviors>
+        <mvvm:CurrentWindowService />
+    </mvvm:Interaction.Behaviors>
+    <Grid>
+        <Grid Margin="12,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource HeaderGroupTextStyle}" Text="Cập nhật vị trí dao, lằng" />
+            <Grid
+                Grid.Row="1"
+                Margin="20,12,0,0"
+                Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox
+                    Grid.Row="0"
+                    Height="80"
+                    Margin="0,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat Width="2100" Height="80">
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang1_Adj"
+                                Tag="1"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang1}"
+                                ViTriCaiDat="{Binding Lang1_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang1_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang2_Adj"
+                                Tag="2"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang2}"
+                                ViTriCaiDat="{Binding Lang2_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang2_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang3_Adj"
+                                Tag="3"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang3}"
+                                ViTriCaiDat="{Binding Lang3_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang3_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang4_Adj"
+                                Tag="4"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang4}"
+                                ViTriCaiDat="{Binding Lang4_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang4_PV.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+                </Viewbox>
+
+                <Viewbox
+                    Grid.Row="1"
+                    Height="80"
+                    Margin="0,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat Width="2100" Height="80">
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang5_Adj"
+                                Tag="5"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang5}"
+                                ViTriCaiDat="{Binding Lang5_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang5_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang6_Adj"
+                                Tag="6"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang6}"
+                                ViTriCaiDat="{Binding Lang6_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang6_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang7_Adj"
+                                Tag="7"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang7}"
+                                ViTriCaiDat="{Binding Lang7_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang7_PV.Value}" />
+                            <local:ConLanEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Lang8_Adj"
+                                Tag="8"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiLang8}"
+                                ViTriCaiDat="{Binding Lang8_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Lang8_PV.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="2"
+                    Height="80"
+                    Margin="0,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat Width="2100" Height="80">
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:DaoCatEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Dao1_Adj"
+                                Tag="1"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiDao1}"
+                                ViTriCaiDat="{Binding Dao1_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Dao1_PV.Value}" />
+                            <local:DaoCatEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Dao2_Adj"
+                                Tag="2"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiDao2}"
+                                ViTriCaiDat="{Binding Dao2_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Dao2_PV.Value}" />
+                            <local:DaoCatEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Dao3_Adj"
+                                Tag="3"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiDao3}"
+                                ViTriCaiDat="{Binding Dao3_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Dao3_PV.Value}" />
+                            <local:DaoCatEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Dao4_Adj"
+                                Tag="4"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiDao4}"
+                                ViTriCaiDat="{Binding Dao4_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Dao4_PV.Value}" />
+                            <local:DaoCatEdit
+                                EnterCommand="{Binding AdjustCommand}"
+                                EnterCommandParameter="Dao5_Adj"
+                                Tag="5"
+                                TrangThaiDao="{Binding TagContainer.TrangThaiDao5}"
+                                ViTriCaiDat="{Binding Dao5_Adj, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                ViTriHienTai="{Binding Dao5_PV.Value}" />
+
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+
+                </Viewbox>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Style="{StaticResource HeaderGroupTextStyle}" Text="Cập nhật vị trí hút, khe hở lằng" />
+                    <Grid Grid.Row="1" Margin="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="8" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Hút PV:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            IsEnabled="False"
+                            IsReadOnly="True"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding TagContainer.Hut_PV.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Hút Adj:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding HutAdj, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="6"
+                            Margin="0,4,0,0"
+                            Content="Khe hở PV:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="7"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            IsEnabled="False"
+                            IsReadOnly="True"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding TagContainer.KheHo_PV.Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="9"
+                            Margin="0,4,0,0"
+                            Content="Khe hở Adj:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="10"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding KheHoAdj, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="0,12,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="32" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,0,0,8"
+                        Style="{StaticResource HeaderGroupTextStyle}"
+                        Text="Vị trí min/max của dao và lằng" />
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="12" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="200" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao - Dao:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding DaoDao, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Lằng - Lằng:" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding LangLang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Lằng 1 Min:" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang1Min, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Lằng 2 Min:" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang2Min, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Lằng 3 Min:" />
+                        <TextBox
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang3Min, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Lằng 4 Min:" />
+                        <TextBox
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang4Min, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Dao 1 Max:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Dao1Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Dao 2 Max:" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Dao2Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Lằng 1 Max:" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang1Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Lằng 2 Max:" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang2Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Lằng 3 Max:" />
+                        <TextBox
+                            Grid.Row="4"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang3Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            Content="Lằng 4 Max:" />
+                        <TextBox
+                            Grid.Row="5"
+                            Grid.Column="4"
+                            Height="30"
+                            Margin="0,4,0,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding Lang4Max, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                    </Grid>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Margin="0,0,0,8"
+                        Style="{StaticResource HeaderGroupTextStyle}"
+                        Text="Chiều dài cần mài dao" />
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="60" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Center"
+                            Content="Thực tế" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Center"
+                            Content="Cài đặt" />
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            Margin="0,4,0,0"
+                            HorizontalAlignment="Center"
+                            Content="Tổng đã chạy" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao 1" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDao1.Value}" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding CaiDatDao1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDaChayDao1.Value}" />
+                        <Button
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Command="{Binding ResetDaoCommand}"
+                            CommandParameter="1"
+                            Content="Reset"
+                            Style="{StaticResource BlueButton}" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao 2" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDao2.Value}" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding CaiDatDao2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDaChayDao2.Value}" />
+                        <Button
+                            Grid.Row="2"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Command="{Binding ResetDaoCommand}"
+                            CommandParameter="2"
+                            Content="Reset"
+                            Style="{StaticResource BlueButton}" />
+
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao 3" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDao3.Value}" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding CaiDatDao3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="3"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDaChayDao3.Value}" />
+                        <Button
+                            Grid.Row="3"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Command="{Binding ResetDaoCommand}"
+                            CommandParameter="3"
+                            Content="Reset"
+                            Style="{StaticResource BlueButton}" />
+
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao 4" />
+                        <TextBox
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDao4.Value}" />
+                        <TextBox
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding CaiDatDao4, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <TextBox
+                            Grid.Row="4"
+                            Grid.Column="3"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDaChayDao4.Value}" />
+                        <Button
+                            Grid.Row="4"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Command="{Binding ResetDaoCommand}"
+                            CommandParameter="4"
+                            Content="Reset"
+                            Style="{StaticResource BlueButton}" />
+
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Margin="0,4,0,0"
+                            Content="Dao 5" />
+                        <TextBox
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDao5.Value}" />
+                        <TextBox
+                            Grid.Row="5"
+                            Grid.Column="2"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding CaiDatDao5, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+                        <TextBox
+                            Grid.Row="5"
+                            Grid.Column="3"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            IsEnabled="False"
+                            Style="{StaticResource BlueTextBox}"
+                            Text="{Binding ChieuDaiDaChayDao5.Value}" />
+                        <Button
+                            Grid.Row="5"
+                            Grid.Column="4"
+                            Width="50"
+                            Height="30"
+                            Margin="2,4,2,0"
+                            Command="{Binding ResetDaoCommand}"
+                            CommandParameter="5"
+                            Content="Reset"
+                            Style="{StaticResource BlueButton}" />
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <StackPanel
+                Grid.Row="4"
+                Margin="83,12,0,0"
+                Orientation="Horizontal">
+                <Button
+                    x:Name="btnSave"
+                    Width="100"
+                    Height="30"
+                    Command="{Binding SaveCommand}"
+                    Content="Save (Enter)"
+                    Style="{StaticResource BlueButton}" />
+
+                <Button
+                    x:Name="btnCancel"
+                    Width="100"
+                    Height="30"
+                    Margin="8,0,0,0"
+                    Command="{Binding CancelCommand}"
+                    Content="Cancel (Esc)"
+                    Style="{StaticResource BlueButton}" />
+
+                <CheckBox
+                    Margin="12,0,0,0"
+                    VerticalAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Content="Cho phép chạy máy"
+                    IsChecked="{Binding ChoPhepChayMay, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                    IsThreeState="False" />
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

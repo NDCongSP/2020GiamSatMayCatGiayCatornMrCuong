@@ -1,0 +1,129 @@
+﻿<UserControl
+    x:Class="MayCat.DaoCat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="host"
+    d:DesignHeight="150"
+    d:DesignWidth="400"
+    Foreground="Green"
+    mc:Ignorable="d">
+    <Viewbox>
+        <Grid Width="400" Height="150">
+            <Grid Width="60" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*" />
+                    <RowDefinition Height="0.6*" />
+                    <RowDefinition Height="0.3*" />
+                </Grid.RowDefinitions>
+
+                <Path
+                    Grid.RowSpan="3"
+                    HorizontalAlignment="Center"
+                    Data="M 70,150 L 70,55 L 160,102.5 z"
+                    Fill="{Binding ElementName=host, Path=Foreground}"
+                    RenderTransformOrigin="0.5,0.5"
+                    Stretch="Fill" Margin="31.135,0,0,1.5" Width="28.865">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="1" />
+                            <SkewTransform AngleX="0" AngleY="0" />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Border Grid.Row="1" Background="{Binding ElementName=host, Path=Foreground}" Margin="30,0,0,0">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="40"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Text="{Binding ElementName=host, Path=Tag}" />
+                </Border>
+            </Grid>
+            <AdornerDecorator
+                Margin="0,0,0,-60"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="50"
+                        FontWeight="SemiBold"
+                        Foreground="Red"
+                        Text="{Binding ElementName=host, Path=ViTriHienTai, StringFormat=f1, FallbackValue=0}" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="50"
+                        FontWeight="SemiBold"
+                        Foreground="Black"
+                        Text="/" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        FontSize="50"
+                        FontWeight="SemiBold"
+                        Foreground="Green"
+                        Text="{Binding ElementName=host, Path=ViTriCaiDat, StringFormat=f1, FallbackValue=0}" />
+                </StackPanel>
+            </AdornerDecorator>
+            <Grid
+                Margin="0,2,220,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top">
+                <Button
+                    Width="34"
+                    Height="34"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Command="{Binding ElementName=host, Path=LeftCommand}"
+                    CommandParameter="{Binding ElementName=host, Path=LeftCommandParameter}"
+                    FontSize="30"
+                    Foreground="Blue">
+                    <Polygon
+                        Margin="0"
+                        Fill="Blue"
+                        Points="26,0 26,26 0,13" />
+                </Button>
+            </Grid>
+
+            <Grid
+                Margin="0,2,130,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top">
+                <Button
+                    Width="34"
+                    Height="34"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    BorderThickness="0"
+                    Command="{Binding ElementName=host, Path=RightCommand}"
+                    CommandParameter="{Binding ElementName=host, Path=RightCommandParameter}"
+                    FontSize="30"
+                    Foreground="Blue">
+                    <Polygon
+                        Margin="0"
+                        Fill="Blue"
+                        Points="0,0 0,26 26,13" />
+                </Button>
+            </Grid>
+            <!--<Grid
+                Margin="0,0,230,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    FontSize="30"
+                    Foreground="Blue"
+                    Text="{Binding ElementName=host, Path=ConLai, StringFormat=f1, FallbackValue=0}" />
+            </Grid>-->
+        </Grid>
+    </Viewbox>
+</UserControl>

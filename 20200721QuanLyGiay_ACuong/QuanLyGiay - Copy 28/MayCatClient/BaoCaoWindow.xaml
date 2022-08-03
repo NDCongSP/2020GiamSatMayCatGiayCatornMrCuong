@@ -1,0 +1,1390 @@
+﻿<Window
+    x:Class="MayCatClient.BaoCaoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:CommonControls;assembly=CommonControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCatClient"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpfx="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+    Title="Báo cáo"
+    Width="1200"
+    Height="583.682"
+    Background="#FFAEAEAA"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <control:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
+        <control:TimespanToStringConverter x:Key="TimespanToStringConverter" />
+        <control:FirstRowToRedForegroundConverter x:Key="FirstRowToRedForegroundConverter" />
+        <Style TargetType="DataGridCell">
+            <Setter Property="IsEditing" Value="False" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <BorderGapMaskConverter x:Key="BorderGapMaskConverter" />
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="BorderBrush" Value="#D5DFE5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type GroupBox}">
+                        <Grid SnapsToDevicePixels="true">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="6" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="6" />
+                            </Grid.RowDefinitions>
+                            <Border
+                                Grid.Row="1"
+                                Grid.RowSpan="3"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="4"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="Transparent"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4" />
+                            <Border
+                                Grid.Row="1"
+                                Grid.RowSpan="3"
+                                Grid.ColumnSpan="4"
+                                BorderBrush="Transparent"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                                <Border.OpacityMask>
+                                    <MultiBinding Converter="{StaticResource BorderGapMaskConverter}" ConverterParameter="7">
+                                        <Binding ElementName="Header" Path="ActualWidth" />
+                                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource Self}" />
+                                        <Binding Path="ActualHeight" RelativeSource="{RelativeSource Self}" />
+                                    </MultiBinding>
+                                </Border.OpacityMask>
+                                <Border
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="3">
+                                    <Border
+                                        BorderBrush="Transparent"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="2" />
+                                </Border>
+                            </Border>
+                            <Border
+                                x:Name="Header"
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="1"
+                                Padding="3,1,3,0">
+                                <ContentPresenter
+                                    ContentSource="Header"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                            <ContentPresenter
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="2"
+                                Margin="{TemplateBinding Padding}"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <GroupBox
+            x:Name="groupBox"
+            Grid.Row="0"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            BorderBrush="Gray"
+            Header="Truy vấn đơn hàng">
+            <GroupBox.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                </Style>
+            </GroupBox.Resources>
+            <Grid x:Name="grid" Margin="0,0,0,-0">
+                <Label
+                    Grid.ColumnSpan="2"
+                    Width="58"
+                    Height="26"
+                    Margin="10,15,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Từ ngày: " />
+                <wpfx:DateTimePicker
+                    x:Name="txbTuNgay"
+                    Width="200"
+                    Height="24"
+                    Margin="73,15,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderBrush="Gray"
+                    TabIndex="0"
+                    Text="" />
+                <Button
+                    x:Name="btnTruyVan"
+                    Width="78"
+                    Height="33"
+                    Margin="554,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Truy vấn"
+                    FontSize="16"
+                    TabIndex="24" />
+                <Label
+                    Width="66"
+                    Height="26"
+                    Margin="278,15,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Đến ngày: " />
+                <wpfx:DateTimePicker
+                    x:Name="txbDenNgay"
+                    Width="200"
+                    Height="24"
+                    Margin="349,15,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderBrush="Gray"
+                    TabIndex="0"
+                    Text="" />
+                <Label
+                    Width="69"
+                    Height="26"
+                    Margin="27,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Loại Sóng" />
+                <ComboBox
+                    x:Name="cobMa"
+                    Width="107"
+                    Margin="809,31,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="250,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Sóng 1" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="362,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mặt 1" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="474,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Sóng 2" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="585,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mặt 2" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="697,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Sóng 3" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="809,61,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mặt 3" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="809,5,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mã" />
+                <ComboBox
+                    x:Name="cobKho"
+                    Width="107"
+                    Margin="1033,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="1038,56,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Khổ" />
+                <ComboBox
+                    x:Name="cobSong"
+                    Width="106"
+                    Margin="27,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobSongE"
+                    Width="107"
+                    Margin="250,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobMatE"
+                    Width="107"
+                    Margin="362,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobSongB"
+                    Width="107"
+                    Margin="474,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobMatB"
+                    Width="107"
+                    Margin="585,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobSongC"
+                    Width="107"
+                    Margin="697,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobMatC"
+                    Width="107"
+                    Margin="809,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <ComboBox
+                    x:Name="cobMen"
+                    Width="107"
+                    Margin="138,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="138,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Mền" />
+                <ComboBox
+                    x:Name="cobCa"
+                    Width="107"
+                    Margin="1033,31,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="50"
+                    Height="26"
+                    Margin="1033,5,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Ca" />
+                <ComboBox
+                    x:Name="cobTrangThai"
+                    Width="107"
+                    Margin="921,84,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="77"
+                    Height="26"
+                    Margin="918,58,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Trạng thái" />
+                <Button
+                    x:Name="btnXoaLoc"
+                    Width="74"
+                    Height="33"
+                    Margin="724,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="Xóa lọc"
+                    FontSize="16"
+                    TabIndex="24" />
+                <ComboBox
+                    x:Name="cobSTT"
+                    Width="107"
+                    Margin="921,31,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    IsEditable="True" />
+                <Label
+                    Width="58"
+                    Height="26"
+                    Margin="921,5,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Content="STT" />
+                <Button
+                    x:Name="btnXuatExcel"
+                    Width="82"
+                    Height="33"
+                    Margin="637,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Click="BtnXuatExcel_Click_1"
+                    Content="Xuất Excel"
+                    FontSize="16"
+                    RenderTransformOrigin="0.241,0.616"
+                    TabIndex="24" />
+            </Grid>
+        </GroupBox>
+        <GroupBox
+            x:Name="groupBox1"
+            Grid.Row="1"
+            Margin="10,0,10,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Stretch"
+            Background="#FFAEAEAA"
+            BorderBrush="Gray"
+            Header="Danh sách đơn hàng">
+            <DataGrid
+                x:Name="dataGrid"
+                Margin="4,6,4,4"
+                AllowDrop="False"
+                AlternatingRowBackground="#FFD7DDE6"
+                AutoGenerateColumns="False"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CanUserAddRows="False"
+                CanUserDeleteRows="False"
+                CanUserReorderColumns="False"
+                CanUserResizeColumns="False"
+                CanUserResizeRows="False"
+                CanUserSortColumns="False"
+                FrozenColumnCount="3"
+                HorizontalScrollBarVisibility="Visible"
+                IsTabStop="True"
+                RowBackground="White"
+                RowHeaderWidth="0"
+                RowHeight="34"
+                SelectionMode="Single"
+                SelectionUnit="FullRow"
+                VerticalScrollBarVisibility="Visible">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+                        Width="80"
+                        Binding="{Binding STT}"
+                        FontSize="12"
+                        Header="STT">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="IsEditing" Value="False" />
+                                <Setter Property="Foreground" Value="{Binding Converter={StaticResource FirstRowToRedForegroundConverter}}" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                            <Grid
+                                                HorizontalAlignment="Stretch"
+                                                VerticalAlignment="Stretch"
+                                                Background="{TemplateBinding Background}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="107"
+                        Binding="{Binding Ma}"
+                        FontSize="12"
+                        Header="Mã">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Height" Value="28" />
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Song}"
+                        FontSize="12"
+                        Header="Sóng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="53"
+                        Binding="{Binding Kho}"
+                        FontSize="12"
+                        Header="Khổ">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC9C9C9" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding Men}"
+                        FontSize="12"
+                        Header="Mền">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiaySongE}"
+                        FontSize="12"
+                        Header="Sóng 1">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiayMatE}"
+                        FontSize="12"
+                        Header="Mặt 1">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiaySongB}"
+                        FontSize="12"
+                        Header="Sóng 2">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiayMatB}"
+                        FontSize="12"
+                        Header="Mặt 2">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiaySongC}"
+                        FontSize="12"
+                        Header="Sóng 3">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="60"
+                        Binding="{Binding GiayMatC}"
+                        FontSize="12"
+                        Header="Mặt 3">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#BDD7EE" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Dai}"
+                        FontSize="12"
+                        Header="Dài">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding SL}"
+                        FontSize="12"
+                        Header="S.L">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="64"
+                        Binding="{Binding Tong, StringFormat=f0}"
+                        FontSize="12"
+                        Header="Tổng"
+                        IsReadOnly="True">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Pallet}"
+                        FontSize="12"
+                        Header="Pallet">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFFFF00" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Xa}"
+                        FontSize="12"
+                        Header="Xả">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Rong}"
+                        FontSize="12"
+                        Header="Rộng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Canh}"
+                        FontSize="12"
+                        Header="Cánh">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Cao}"
+                        FontSize="12"
+                        Header="Cao">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Lang}"
+                        FontSize="12"
+                        Header="Lằng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFC000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="106"
+                        Binding="{Binding GhiChu}"
+                        FontSize="12"
+                        Header="Ghi chú">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="White"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FFFF0000" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                        <!--
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Foreground" Value="{Binding  Converter={StaticResource FirstRowToRedForegroundConverter}}"/>
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                        <Grid Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                            <Grid Margin="0 2">
+                                                <TextBlock Text="{Binding Path=GhiChu}" Padding="4" TextWrapping="Wrap" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                        -->
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding SLDat}"
+                        FontSize="12"
+                        Header="Đạt">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding SLLoi}"
+                        FontSize="12"
+                        Header="Lỗi">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding M2Dat}"
+                        FontSize="12"
+                        Header="M2 Đạt">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding M2Loi}"
+                        FontSize="12"
+                        Header="M2 Lỗi">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding PhanTramLoi, StringFormat=f1}"
+                        FontSize="12"
+                        Header="% Lỗi">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Le, StringFormat=f0}"
+                        FontSize="12"
+                        Header="Lề">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding PhanTramLe, StringFormat=f1}"
+                        FontSize="12"
+                        Header="% Lề">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding TocDoTB}"
+                        FontSize="12"
+                        Header="T.Độ">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Chay, Converter={StaticResource TimespanToStringConverter}}"
+                        FontSize="12"
+                        Header="Chạy">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding Dung, Converter={StaticResource TimespanToStringConverter}}"
+                        FontSize="12"
+                        Header="Dừng">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="54"
+                        Binding="{Binding SoDung}"
+                        FontSize="12"
+                        Header="Lần">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="Auto"
+                        Binding="{Binding TGBatDau, Converter={StaticResource DateTimeToStringConverter}}"
+                        FontSize="12"
+                        Header="Ngày S.X">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+                        Width="Auto"
+                        Binding="{Binding TGKetThuc, Converter={StaticResource DateTimeToStringConverter}}"
+                        FontSize="12"
+                        Header="Ngày K.Thúc">
+                        <DataGridTextColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="12"
+                                    FontWeight="SemiBold"
+                                    Foreground="#FF002060"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </DataTemplate>
+                        </DataGridTextColumn.HeaderTemplate>
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="BorderThickness" Value="0,0,1,1" />
+                                <Setter Property="BorderBrush" Value="Black" />
+                                <Setter Property="Padding" Value="2" />
+                                <Setter Property="Background" Value="#FF8497B0" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+    </Grid>
+</Window>

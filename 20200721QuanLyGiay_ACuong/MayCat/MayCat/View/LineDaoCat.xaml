@@ -1,0 +1,92 @@
+﻿<UserControl
+    x:Class="MayCat.LineDaoCat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="host"
+    Height="80"
+    d:DesignHeight="80"
+    d:DesignWidth="2100"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Style x:Key="Delimeter" TargetType="Rectangle">
+            <Setter Property="Width" Value="2" />
+            <Setter Property="Height" Value="25" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Fill" Value="Black" />
+        </Style>
+
+        <Style TargetType="local:DaoCat">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Height" Value="{Binding ElementName=host, Path=Height}" />
+        </Style>
+
+        <Style TargetType="local:ConLan">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Height" Value="{Binding ElementName=host, Path=Height}" />
+
+        </Style>
+
+        <Style TargetType="local:DaoCatEdit">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Height" Value="{Binding ElementName=host, Path=Height}" />
+        </Style>
+
+        <Style TargetType="local:ConLanEdit">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Width" Value="400" />
+            <Setter Property="Height" Value="{Binding ElementName=host, Path=Height}" />
+
+        </Style>
+    </UserControl.Resources>
+
+    <Canvas x:Name="container">
+        <Grid
+            Width="2100"
+            Height="80"
+            Margin="0,0,0,0"
+            VerticalAlignment="Top"
+            ClipToBounds="False">
+            <Rectangle
+                Width="2000"
+                Height="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                ClipToBounds="False"
+                Stroke="Red" />
+            <Rectangle Margin="0,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="99,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="199,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="299,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="399,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="499,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="599,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="699,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="799,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="899,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="999,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1099,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1199,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1299,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1399,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1499,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1599,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1699,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1799,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1899,0,0,0" Style="{StaticResource Delimeter}" />
+            <Rectangle Margin="1998,0,0,0" Style="{StaticResource Delimeter}" />
+
+        </Grid>
+    </Canvas>
+</UserControl>

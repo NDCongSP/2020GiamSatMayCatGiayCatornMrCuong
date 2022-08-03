@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MaySong.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="May" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E</Value>
+    </Setting>
+    <Setting Name="serverUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://192.168.1.10:9910/signalr</Value>
+    </Setting>
+    <Setting Name="constr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+Server=192.168.1.10;Database=cutter;Uid=root;Pwd=100100;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

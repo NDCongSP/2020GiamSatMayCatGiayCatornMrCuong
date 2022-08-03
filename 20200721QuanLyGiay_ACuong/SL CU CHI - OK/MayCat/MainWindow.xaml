@@ -1,0 +1,564 @@
+﻿<Window
+    x:Class="MayCat.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MÁY XẢ"
+    Width="1366"
+    Height="768"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style TargetType="local:LineDaoCat">
+            <Setter Property="Height" Value="80" />
+            <Setter Property="Width" Value="2100" />
+        </Style>
+        <local:ChuyenDoTuDongToTextConverter x:Key="ChuyenDoTuDongToTextConverter" />
+    </Window.Resources>
+    <Grid Background="#FFAEAEAA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="44*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="440" />
+            </Grid.ColumnDefinitions>
+            <Grid Margin="4,4,0,4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <local:DonHangDangChayView
+                    x:Name="donHangChuanBi"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BackgroundMay1="{Binding BackgroundMay1}"
+                    BackgroundMay2="{Binding BackgroundMay2}"
+                    Cao1="{Binding DonHangHienTaiMay1.Cao}"
+                    Cao2="{Binding DonHangKeTiepMay1.Cao}"
+                    Cao3="{Binding DonHangHienTaiMay2.Cao}"
+                    Cao4="{Binding DonHangKeTiepMay2.Cao}"
+                    DonHang11="{Binding DonHangHienTaiMay1}"
+                    DonHang12="{Binding DonHangKeTiepMay1}"
+                    DonHang21="{Binding DonHangHienTaiMay2}"
+                    DonHang22="{Binding DonHangKeTiepMay2}"
+                    KheHoLang1="{Binding DonHangHienTaiMay1.KheHoLang}"
+                    KheHoLang2="{Binding DonHangKeTiepMay1.KheHoLang}"
+                    KheHoLang3="{Binding DonHangHienTaiMay2.KheHoLang}"
+                    KheHoLang4="{Binding DonHangKeTiepMay2.KheHoLang}"
+                    KheHoLangThucTe1="{Binding May1.KheHo_PV.Value}"
+                    KheHoLangThucTe3="{Binding May2.KheHo_PV.Value}"
+                    Lang1="{Binding DonHangHienTaiMay1.Lang}"
+                    Lang2="{Binding DonHangKeTiepMay1.Lang}"
+                    Lang3="{Binding DonHangHienTaiMay2.Lang}"
+                    Lang4="{Binding DonHangKeTiepMay2.Lang}"
+                    Nap11="{Binding DonHangHienTaiMay1.Nap1}"
+                    Nap12="{Binding DonHangKeTiepMay1.Nap1}"
+                    Nap13="{Binding DonHangHienTaiMay2.Nap1}"
+                    Nap14="{Binding DonHangKeTiepMay2.Nap1}"
+                    Nap21="{Binding DonHangHienTaiMay1.Nap2}"
+                    Nap22="{Binding DonHangKeTiepMay1.Nap2}"
+                    Nap23="{Binding DonHangHienTaiMay2.Nap2}"
+                    Nap24="{Binding DonHangKeTiepMay2.Nap2}"
+                    Nap31="{Binding DonHangHienTaiMay1.Nap3}"
+                    Nap32="{Binding DonHangKeTiepMay1.Nap3}"
+                    Nap33="{Binding DonHangHienTaiMay2.Nap3}"
+                    Nap34="{Binding DonHangKeTiepMay2.Nap3}"
+                    Nap41="{Binding DonHangHienTaiMay1.Nap4}"
+                    Nap42="{Binding DonHangKeTiepMay1.Nap4}"
+                    Nap43="{Binding DonHangHienTaiMay2.Nap4}"
+                    Nap44="{Binding DonHangKeTiepMay2.Nap4}"
+                    STT1="{Binding May1.STT1.Value}"
+                    STT2="{Binding May1.STT2.Value}"
+                    STT3="{Binding May2.STT1.Value}"
+                    STT4="{Binding May2.STT2.Value}"
+                    Song1="{Binding DonHangHienTaiMay1.Song}"
+                    Song2="{Binding DonHangKeTiepMay1.Song}"
+                    Song3="{Binding DonHangHienTaiMay2.Song}"
+                    Song4="{Binding DonHangKeTiepMay2.Song}"
+                    Xa1="{Binding DonHangHienTaiMay1.Xa}"
+                    Xa2="{Binding DonHangKeTiepMay1.Xa}"
+                    Xa3="{Binding DonHangHienTaiMay2.Xa}"
+                    Xa4="{Binding DonHangKeTiepMay2.Xa}" />
+                <!--<local:DonHangDangChayView
+                    x:Name="donHangChuanBi"
+                    Grid.Row="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    BackgroundMay1="{Binding BackgroundMay1}"
+                    BackgroundMay2="{Binding BackgroundMay2}"
+                    Cao1="{Binding May1.Cao1.Value}"
+                    Cao2="{Binding May1.Cao2.Value}"
+                    Cao3="{Binding May2.Cao1.Value}"
+                    Cao4="{Binding May2.Cao2.Value}"
+                    KheHoLang1="{Binding May1.KheHo1.Value}"
+                    KheHoLang2="{Binding May1.KheHo2.Value}"
+                    KheHoLang3="{Binding May2.KheHo1.Value}"
+                    KheHoLang4="{Binding May2.KheHo2.Value}"
+                    KheHoLangThucTe1="{Binding May1.KheHo_PV.Value}"
+                    KheHoLangThucTe3="{Binding May2.KheHo_PV.Value}"
+                    Lang1="{Binding May1.Lang1.Value}"
+                    Lang2="{Binding May1.Lang2.Value}"
+                    Lang3="{Binding May2.Lang1.Value}"
+                    Lang4="{Binding May2.Lang2.Value}"
+                    Nap11="{Binding May1.Nap11.Value}"
+                    Nap12="{Binding May1.Nap21.Value}"
+                    Nap13="{Binding May2.Nap11.Value}"
+                    Nap14="{Binding May2.Nap21.Value}"
+                    Nap21="{Binding May1.Nap12.Value}"
+                    Nap22="{Binding May1.Nap22.Value}"
+                    Nap23="{Binding May2.Nap12.Value}"
+                    Nap24="{Binding May2.Nap22.Value}"
+                    STT1="{Binding May1.STT1.Value}"
+                    STT2="{Binding May1.STT2.Value}"
+                    STT3="{Binding May2.STT1.Value}"
+                    STT4="{Binding May2.STT2.Value}"
+                    Song1="{Binding DonHangHienTaiMay1.Song}"
+                    Song2="{Binding DonHangKeTiepMay1.Song}"
+                    Song3="{Binding DonHangHienTaiMay2.Song}"
+                    Song4="{Binding DonHangKeTiepMay2.Song}"
+                    Xa1="{Binding May1.Xa1.Value}"
+                    Xa2="{Binding May1.Xa2.Value}"
+                    Xa3="{Binding May2.Xa1.Value}"
+                    Xa4="{Binding May2.Xa2.Value}" />-->
+            </Grid>
+            <local:TocDoView
+                x:Name="thongTinCacTram"
+                Grid.Column="2"
+                Margin="4,4,4,4"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Dan1="{Binding ThongTinTram.Dan1}"
+                Dan2="{Binding ThongTinTram.Dan2}"
+                Dan3="{Binding ThongTinTram.Dan3}"
+                Dan4="{Binding ThongTinTram.Dan4}"
+                Dan5="{Binding ThongTinTram.Dan5}"
+                DoiDon1="{Binding ThongTinTram.DoiDon1}"
+                DoiDon2="{Binding ThongTinTram.DoiDon2}"
+                DoiDon3="{Binding ThongTinTram.DoiDon3}"
+                DoiDon4="{Binding ThongTinTram.DoiDon4}"
+                DoiDon5="{Binding ThongTinTram.DoiDon5}"
+                TocDo1="{Binding ThongTinTram.TocDo1}"
+                TocDo2="{Binding ThongTinTram.TocDo2}"
+                TocDo3="{Binding ThongTinTram.TocDo3}"
+                TocDo4="{Binding ThongTinTram.TocDo4}"
+                TocDo5="{Binding ThongTinTram.TocDo5}"
+                TrangThai1="{Binding ThongTinTram.TrangThai1}"
+                TrangThai2="{Binding ThongTinTram.TrangThai2}"
+                TrangThai3="{Binding ThongTinTram.TrangThai3}"
+                TrangThai4="{Binding ThongTinTram.TrangThai4}"
+                TrangThai5="{Binding ThongTinTram.TrangThai5}" />
+        </Grid>
+        <Grid Grid.Row="1" />
+        <Grid Grid.Row="2" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="0" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Background="White"
+                Opacity="{Binding Opacity1}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Viewbox
+                    Grid.Row="0"
+                    Height="80"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat Width="2100" Height="80">
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang1_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang1_R"
+                                Tag="1"
+                                TrangThaiDao="{Binding May1.TrangThaiLang1}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang1.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang1.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang2_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang2_R"
+                                Tag="2"
+                                TrangThaiDao="{Binding May1.TrangThaiLang2}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang2.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang2.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang3_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang3_R"
+                                Tag="3"
+                                TrangThaiDao="{Binding May1.TrangThaiLang3}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang3.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang3.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang4_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang4_R"
+                                Tag="4"
+                                TrangThaiDao="{Binding May1.TrangThaiLang4}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang4.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang4.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="1"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat>
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang5_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang5_R"
+                                Tag="5"
+                                TrangThaiDao="{Binding May1.TrangThaiLang5}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang5.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang5.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang6_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang6_R"
+                                Tag="6"
+                                TrangThaiDao="{Binding May1.TrangThaiLang6}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang6.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang6.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang7_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang7_R"
+                                Tag="7"
+                                TrangThaiDao="{Binding May1.TrangThaiLang7}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang7.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang7.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Lang8_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Lang8_R"
+                                Tag="8"
+                                TrangThaiDao="{Binding May1.TrangThaiLang8}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatLang8.Value}"
+                                ViTriHienTai="{Binding May1_ViTriLang8.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="2"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat>
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Dao1_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Dao1_R"
+                                Tag="1"
+                                TrangThaiDao="{Binding May1.TrangThaiDao1}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatDao1.Value}"
+                                ViTriHienTai="{Binding May1_ViTriDao1.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Dao2_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Dao2_R"
+                                Tag="2"
+                                TrangThaiDao="{Binding May1.TrangThaiDao2}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatDao2.Value}"
+                                ViTriHienTai="{Binding May1_ViTriDao2.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Dao3_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Dao3_R"
+                                Tag="3"
+                                TrangThaiDao="{Binding May1.TrangThaiDao3}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatDao3.Value}"
+                                ViTriHienTai="{Binding May1_ViTriDao3.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Dao4_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Dao4_R"
+                                Tag="4"
+                                TrangThaiDao="{Binding May1.TrangThaiDao4}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatDao4.Value}"
+                                ViTriHienTai="{Binding May1_ViTriDao4.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft1Command}"
+                                LeftCommandParameter="Dao5_L"
+                                RightCommand="{Binding MoveRight1Command}"
+                                RightCommandParameter="Dao5_R"
+                                Tag="5"
+                                TrangThaiDao="{Binding May1.TrangThaiDao5}"
+                                ViTriCaiDat="{Binding May1_ViTriCaiDatDao5.Value}"
+                                ViTriHienTai="{Binding May1_ViTriDao5.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+
+                    </local:LineDaoCat>
+                </Viewbox>
+            </Grid>
+
+            <Grid Grid.Row="1" Background="#FFD7DDE6">
+                <Viewbox Margin="60,0,0,0" VerticalAlignment="Center">
+                    <local:Ruler
+                        Width="2100"
+                        Height="70"
+                        VerticalAlignment="Center" />
+                </Viewbox>
+            </Grid>
+
+            <Grid
+                Grid.Row="2"
+                IsEnabled="True"
+                Opacity="{Binding Opacity2}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Viewbox
+                    Grid.Row="0"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat Width="2100" Height="80">
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang1_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang1_R"
+                                Tag="1"
+                                TrangThaiDao="{Binding May2.TrangThaiLang1}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang1.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang1.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang2_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang2_R"
+                                Tag="2"
+                                TrangThaiDao="{Binding May2.TrangThaiLang2}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang2.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang2.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang3_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang3_R"
+                                Tag="3"
+                                TrangThaiDao="{Binding May2.TrangThaiLang3}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang3.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang3.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang4_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang4_R"
+                                Tag="4"
+                                TrangThaiDao="{Binding May2.TrangThaiLang4}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang4.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang4.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="1"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat>
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang5_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang5_R"
+                                Tag="5"
+                                TrangThaiDao="{Binding May2.TrangThaiLang5}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang5.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang5.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang6_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang6_R"
+                                Tag="6"
+                                TrangThaiDao="{Binding May2.TrangThaiLang6}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang6.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang6.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang7_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang7_R"
+                                Tag="7"
+                                TrangThaiDao="{Binding May2.TrangThaiLang7}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang7.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang7.Value}" />
+                            <local:ConLan
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Lang8_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Lang8_R"
+                                Tag="8"
+                                TrangThaiDao="{Binding May2.TrangThaiLang8}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatLang8.Value}"
+                                ViTriHienTai="{Binding May2_ViTriLang8.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+                    </local:LineDaoCat>
+                </Viewbox>
+                <Viewbox
+                    Grid.Row="2"
+                    Margin="60,0,0,0"
+                    VerticalAlignment="Top">
+                    <local:LineDaoCat>
+                        <local:LineDaoCat.DanhSachDaoCat>
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Dao1_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Dao1_R"
+                                Tag="1"
+                                TrangThaiDao="{Binding May2.TrangThaiDao1}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatDao1.Value}"
+                                ViTriHienTai="{Binding May2_ViTriDao1.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Dao2_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Dao2_R"
+                                Tag="2"
+                                TrangThaiDao="{Binding May2.TrangThaiDao2}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatDao2.Value}"
+                                ViTriHienTai="{Binding May2_ViTriDao2.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Dao3_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Dao3_R"
+                                Tag="3"
+                                TrangThaiDao="{Binding May2.TrangThaiDao3}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatDao3.Value}"
+                                ViTriHienTai="{Binding May2_ViTriDao3.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Dao4_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Dao4_R"
+                                Tag="4"
+                                TrangThaiDao="{Binding May2.TrangThaiDao4}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatDao4.Value}"
+                                ViTriHienTai="{Binding May2_ViTriDao4.Value}" />
+                            <local:DaoCat
+                                LeftCommand="{Binding MoveLeft2Command}"
+                                LeftCommandParameter="Dao5_L"
+                                RightCommand="{Binding MoveRight2Command}"
+                                RightCommandParameter="Dao5_R"
+                                Tag="5"
+                                TrangThaiDao="{Binding May2.TrangThaiDao5}"
+                                ViTriCaiDat="{Binding May2_ViTriCaiDatDao5.Value}"
+                                ViTriHienTai="{Binding May2_ViTriDao5.Value}" />
+                        </local:LineDaoCat.DanhSachDaoCat>
+
+                    </local:LineDaoCat>
+
+                </Viewbox>
+            </Grid>
+            <Grid Grid.Row="3" Background="#FFD7DDE6" />
+        </Grid>
+        <Grid Grid.Row="3" Margin="0,4,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button
+                x:Name="btnDonHang"
+                Grid.Column="0"
+                Width="130"
+                Height="32"
+                Margin="0,0,0,4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F1 / Đơn hàng"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+
+            <Button
+                x:Name="btnCaiDat"
+                Grid.Column="1"
+                Width="130"
+                Height="32"
+                Margin="0,0,0,4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="F4 / Cài đặt"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White" />
+
+
+            <ToggleButton
+                Grid.Column="3"
+                Width="180"
+                Height="32"
+                Margin="0,0,0,4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Background="#002060"
+                Content="{Binding TuDongChuyenDon, Converter={StaticResource ChuyenDoTuDongToTextConverter}}"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                IsChecked="{Binding TuDongChuyenDon, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+
+            <Label
+                Grid.Column="4"
+                Width="190"
+                Height="32"
+                Margin="0,0,0,4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="Blue"
+                Content="{Binding NguonDonHang}"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Visibility="Visible" />
+        </Grid>
+    </Grid>
+</Window>

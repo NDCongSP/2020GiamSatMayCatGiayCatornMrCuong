@@ -1,0 +1,414 @@
+﻿<UserControl
+    x:Class="MaySong.ThongTinMaySong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MaySong"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="parent"
+    d:DesignHeight="200"
+    d:DesignWidth="850"
+    Background="White"
+    mc:Ignorable="d">
+    <Border BorderBrush="Black" BorderThickness="2,2,1,1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*" />
+                <ColumnDefinition Width="1.3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <!--  Header  -->
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Background="#BDD7EE"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    x:Name="tenSong"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=TenSong}" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="2"
+                Background="#BDD7EE"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Khổ rộng" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="3"
+                Background="#BDD7EE"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Loại giấy" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="4"
+                Background="#BDD7EE"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Chiều dài" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="5"
+                Background="#BDD7EE"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Đổi giấy" />
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="Sóng" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Foreground="Red"
+                        Text="Hiện Tại" />
+                    <TextBlock
+                        x:Name="sttSong"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="Red"
+                        Text="{Binding ElementName=parent, Path=STTSong}" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=KhoSong1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=LoaiGiaySong1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=ChieuDaiSong1}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="Kế Tiếp" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="{Binding ElementName=parent, Path=STTSong2}" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=KhoSong2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=LoaiGiaySong2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=ChieuDaiSong2}" />
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="Mặt" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Foreground="Red"
+                        Text="Hiện Tại" />
+                    <TextBlock
+                        x:Name="sttMat"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="Red"
+                        Text="{Binding ElementName=parent, Path=STTMat}" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=KhoMat1}" />
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=LoaiGiayMat1}" />
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=ChieuDaiMat1}" />
+            </Border>
+            <Border
+                Grid.Row="4"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="Kế Tiếp" />
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Foreground="#FF002060"
+                        Text="{Binding ElementName=parent, Path=STTMat2}" />
+                </StackPanel>
+            </Border>
+            <Border
+                Grid.Row="4"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=KhoMat2}" />
+            </Border>
+            <Border
+                Grid.Row="4"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=LoaiGiayMat2}" />
+            </Border>
+            <Border
+                Grid.Row="4"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=ChieuDaiMat2}" />
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="5"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="48"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=DoiGiaySong}" />
+            </Border>
+            <Border
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.Column="5"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="48"
+                    FontWeight="Bold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=DoiGiayMat}" />
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

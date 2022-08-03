@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\PropertyChanged.Fody.2.6.1\build\PropertyChanged.Fody.props" Condition="Exists('..\packages\PropertyChanged.Fody.2.6.1\build\PropertyChanged.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92737A8B-D185-4F3C-80AA-4150B2849BAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MayCat</RootNamespace>
+    <AssemblyName>MayCat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonControls">
+      <HintPath>..\CommonControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm">
+      <HintPath>..\..\..\..\ATSCADA\Library\DevExpress.Mvvm.Free-master\Bin\Framework4\DevExpress.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.UI">
+      <HintPath>..\..\..\..\ATSCADA\Library\DevExpress.Mvvm.Free-master\Bin\Framework4\DevExpress.Mvvm.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=2.6.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.2.6.1\lib\net452\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AttachedProperty\SelectAllOnFocus.cs" />
+    <Compile Include="CaiDatKheHoLang.xaml.cs">
+      <DependentUpon>CaiDatKheHoLang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaiDatMayCat.xaml.cs">
+      <DependentUpon>CaiDatMayCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaiDatSettings.xaml.cs">
+      <DependentUpon>CaiDatSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ChuyenDoTuDongToTextConverter.cs" />
+    <Compile Include="DonHangWindow.xaml.cs">
+      <DependentUpon>DonHangWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Messages\Messages.cs" />
+    <Compile Include="Modbus\ByteHelper.cs" />
+    <Compile Include="Modbus\ByteOrder.cs" />
+    <Compile Include="Modbus\DataTypes\Base\IDataType.cs" />
+    <Compile Include="Modbus\DataTypes\Base\IDataTypeIndex.cs" />
+    <Compile Include="Modbus\DataTypes\Binary\Bool.cs" />
+    <Compile Include="Modbus\DataTypes\Binary\Byte.cs" />
+    <Compile Include="Modbus\DataTypes\Binary\DWord.cs" />
+    <Compile Include="Modbus\DataTypes\Binary\LWord.cs" />
+    <Compile Include="Modbus\DataTypes\Binary\Word.cs" />
+    <Compile Include="Modbus\DataTypes\Character\Char.cs" />
+    <Compile Include="Modbus\DataTypes\Character\String.cs" />
+    <Compile Include="Modbus\DataTypes\DataTypeBase.cs" />
+    <Compile Include="Modbus\DataTypes\Floating\LReal.cs" />
+    <Compile Include="Modbus\DataTypes\Floating\Real.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\DInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\Int.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\LInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\SInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\UDInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\UInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\ULInt.cs" />
+    <Compile Include="Modbus\DataTypes\Integers\USInt.cs" />
+    <Compile Include="Modbus\ModbusReader.cs" />
+    <Compile Include="Modbus\ModbusRTUReader.cs" />
+    <Compile Include="Modbus\ModbusSerialRTU.cs" />
+    <Compile Include="Modbus\ModbusTCPReader.cs" />
+    <Compile Include="Modbus\ModbusTCP.cs" />
+    <Compile Include="Modbus\ReadBlock.cs" />
+    <Compile Include="Model\KheHoLang.cs" />
+    <Compile Include="Model\NotifyCollection.cs" />
+    <Compile Include="Tags\AddressType.cs" />
+    <Compile Include="Tags\DataType.cs" />
+    <Compile Include="Tags\May1Tags.cs" />
+    <Compile Include="Tags\May2Tags.cs" />
+    <Compile Include="Tags\Quality.cs" />
+    <Compile Include="Tags\Tag.cs" />
+    <Compile Include="Tags\TagContainerBase.cs" />
+    <Compile Include="ThemSuaDonHangWindow.xaml.cs">
+      <DependentUpon>ThemSuaDonHangWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\CaiDatKheHoLangViewModel.cs" />
+    <Compile Include="ViewModel\CaiDatMayCatViewModel.cs" />
+    <Compile Include="ViewModel\CaiDatSettingsViewModel.cs" />
+    <Compile Include="ViewModel\DonHangViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ThemSuaDonHangViewModel.cs" />
+    <Compile Include="View\ConLanEdit.xaml.cs">
+      <DependentUpon>ConLanEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DaoCatEdit.xaml.cs">
+      <DependentUpon>DaoCatEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CheDoHoatDong.cs" />
+    <Compile Include="Model\DonHang.cs" />
+    <Compile Include="Model\IHaveKey.cs" />
+    <Compile Include="Model\TrangThaiDao.cs" />
+    <Compile Include="SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TinhToan.cs" />
+    <Compile Include="View\Ruler.xaml.cs">
+      <DependentUpon>Ruler.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DaoCat.xaml.cs">
+      <DependentUpon>DaoCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConLan.xaml.cs">
+      <DependentUpon>ConLan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DonHangDangChayView.xaml.cs">
+      <DependentUpon>DonHangDangChayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LineDaoCat.xaml.cs">
+      <DependentUpon>LineDaoCat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TocDoView.xaml.cs">
+      <DependentUpon>TocDoView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BlueTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CaiDatKheHoLang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaiDatMayCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaiDatSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DonHangWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThemSuaDonHangWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConLanEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DaoCatEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Ruler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DaoCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConLan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DonHangDangChayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LineDaoCat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\TocDoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Slitter2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Slitter1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.4.2.1\build\Fody.targets" Condition="Exists('..\packages\Fody.4.2.1\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.4.2.1\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.2.1\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\PropertyChanged.Fody.2.6.1\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PropertyChanged.Fody.2.6.1\build\PropertyChanged.Fody.props'))" />
+  </Target>
+</Project>

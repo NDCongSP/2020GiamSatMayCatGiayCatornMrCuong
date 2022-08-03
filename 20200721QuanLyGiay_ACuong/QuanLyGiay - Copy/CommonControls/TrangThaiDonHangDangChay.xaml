@@ -1,0 +1,524 @@
+﻿<UserControl
+    x:Class="CommonControls.TrangThaiDonHangDangChay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CommonControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="parent"
+    d:DesignHeight="85"
+    d:DesignWidth="1275"
+    Background="#FFF2F2F2"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <local:TimespanToStringConverter x:Key="TimespanToStringConverter" />
+    </UserControl.Resources>
+    <Border BorderBrush="Black" BorderThickness="2,2,1,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="45*" />
+                <ColumnDefinition Width="45*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="45*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="40*" />
+            </Grid.ColumnDefinitions>
+            <!--  Header  -->
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="TK" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Số mét" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="2"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Số mét Đạt" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="3"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Số mét Lỗi" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="4"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Còn lại" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="5"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="% Lỗi" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="6"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Tốc độ TB" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="7"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Chạy" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="8"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Dừng" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="9"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="Số dừng" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="10"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="M2 đạt" />
+            </Border>
+            <Border
+                Grid.Row="0"
+                Grid.Column="11"
+                Background="#A9D08E"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="M2 lỗi" />
+            </Border>
+
+            <!--  Đơn hiện tại  -->
+            <Border
+                Grid.Row="1"
+                Grid.Column="0"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=TK1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=SoMet1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=SoMetDat1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=SoMetLoi1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=ConLai1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="5"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=PhanTramLoi1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="6"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=TocDoTrungBinh1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="7"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=Chay1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="8"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=Dung1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="9"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=SoDung1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="10"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=M2Dat1}" />
+            </Border>
+            <Border
+                Grid.Row="1"
+                Grid.Column="11"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="SemiBold"
+                    Foreground="Red"
+                    Text="{Binding ElementName=parent, Path=M2Loi1}" />
+            </Border>
+
+            <!--  Tổng của ca  -->
+            <Border
+                Grid.Row="2"
+                Grid.Column="0"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=TK2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="1"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=SoMet2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="2"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=SoMetDat2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="3"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=SoMetLoi2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="4"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=ConLai2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="5"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=PhanTramLoi2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="6"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=TocDoTrungBinh2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="7"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=Chay2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="8"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=Dung2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="9"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=SoDung2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="10"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=M2Dat2}" />
+            </Border>
+            <Border
+                Grid.Row="2"
+                Grid.Column="11"
+                BorderBrush="Black"
+                BorderThickness="0,0,1,1">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="#FF002060"
+                    Text="{Binding ElementName=parent, Path=M2Loi2}" />
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

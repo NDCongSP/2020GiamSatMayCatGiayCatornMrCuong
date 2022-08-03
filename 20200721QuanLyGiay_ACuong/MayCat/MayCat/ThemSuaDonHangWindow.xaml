@@ -1,0 +1,193 @@
+﻿<Window
+    x:Class="MayCat.ThemSuaDonHangWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    Title="{Binding Title}"
+    Width="540"
+    Height="300"
+    mc:Ignorable="d">
+    <mvvm:Interaction.Behaviors>
+        <mvvm:CurrentWindowService />
+    </mvvm:Interaction.Behaviors>
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Margin="0,0,0,4"
+            Style="{StaticResource HeaderGroupTextStyle}"
+            Text="{Binding Title}" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="12" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="3"
+                Margin="0,4,0,0"
+                Content="Mã:" />
+            <TextBox
+                Grid.Row="0"
+                Grid.Column="4"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="1"
+                Text="{Binding Ma, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="3"
+                Margin="0,4,0,0"
+                Content="Xả:" />
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="4"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="3"
+                Text="{Binding Xa, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,4,0,0"
+                Content="Sóng:" />
+            <TextBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="2"
+                Text="{Binding Song, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="0,4,0,0"
+                Content="Nắp:" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="4"
+                Text="{Binding Nap1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="0,4,0,0"
+                Content="Nắp:" />
+            <TextBox
+                Grid.Row="3"
+                Grid.Column="1"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="6"
+                Text="{Binding Nap2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,4,0,0"
+                Content="STT:" />
+            <TextBox
+                x:Name="txbSTT"
+                Grid.Row="0"
+                Grid.Column="1"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="0"
+                Text="{Binding STT, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="3"
+                Margin="0,4,0,0"
+                Content="Cao:" />
+            <TextBox
+                Grid.Row="2"
+                Grid.Column="4"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="5"
+                Text="{Binding Cao, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="3"
+                Margin="0,4,0,0"
+                Content="Lằng:" />
+            <TextBox
+                Grid.Row="3"
+                Grid.Column="4"
+                Height="30"
+                Margin="0,4,0,0"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="7"
+                Text="{Binding Lang, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Margin="0,4,0,0"
+                Content="Ghi chú:" />
+            <TextBox
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="4"
+                Height="30"
+                Margin="0,4,0,0"
+                IsTabStop="True"
+                Style="{StaticResource BlueTextBox}"
+                TabIndex="8"
+                Text="{Binding GhiChu, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+        </Grid>
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,8,0,0"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Button
+                x:Name="btnSave"
+                Width="100"
+                Height="30"
+                Command="{Binding SaveCommand}"
+                Content="Lưu (Enter)"
+                Style="{StaticResource BlueButton}" />
+            <Button
+                x:Name="btnThoat"
+                Width="100"
+                Height="30"
+                Margin="8,0,0,0"
+                VerticalAlignment="Top"
+                Content="Thoát (Esc)"
+                Style="{StaticResource BlueButton}" />
+        </StackPanel>
+    </Grid>
+</Window>

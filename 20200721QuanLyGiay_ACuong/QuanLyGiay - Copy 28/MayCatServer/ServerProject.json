@@ -1,0 +1,6411 @@
+{
+  "ProjectPath": "C:\\Users\\Harry\\Desktop\\Mo Phong\\ServerProject.json",
+  "Username": null,
+  "Password": null,
+  "ParameterContainer": null,
+  "Childs": [
+    {
+  "Name": "Local Station",
+  "Description": null,
+  "ItemType": "LocalStation",
+  "IsReadOnly": true,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:51:29.6370237+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {}
+},
+  "CommunicationMode": "ReceiveFromServer",
+  "StationType": "Local",
+  "RemoteAddress": null,
+  "Port": 0,
+  "OpcDaServerName": null,
+  "RefreshRate": 0,
+  "Childs": [
+    {
+  "Name": "Channel",
+  "Description": null,
+  "ItemType": "Channel",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:51:34.6655298+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusTCP Comunication Parameters",
+  "DisplayParameters": "ModbusTCP Comunication Parameters",
+  "Parameters": {
+    "Port": "502"
+  }
+},
+  "DriverPath": "C:\\Users\\Admin\\Desktop\\App\\Debug\\Driver\\ModbusTCP.dll",
+  "Childs": [
+    {
+  "Name": "CUTTER",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:02.7965981+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "127.0.0.1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "3",
+    "UnitId": "1",
+    "ScanRate": "10",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-406001-406060"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "STTChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.2951288+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.2951288+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406001",
+    "AddressType": "HoldingRegister",
+    "Offset": "6000",
+    "IsValid": "True"
+  }
+},
+  "Address": "406001",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DaiCatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3016321+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3016321+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406003",
+    "AddressType": "HoldingRegister",
+    "Offset": "6002",
+    "IsValid": "True"
+  }
+},
+  "Address": "406003",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLDatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406005",
+    "AddressType": "HoldingRegister",
+    "Offset": "6004",
+    "IsValid": "True"
+  }
+},
+  "Address": "406005",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLLoiChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6006",
+    "IsValid": "True"
+  }
+},
+  "Address": "406007",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3026326+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406009",
+    "AddressType": "HoldingRegister",
+    "Offset": "6008",
+    "IsValid": "True"
+  }
+},
+  "Address": "406009",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DaiCat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406011",
+    "AddressType": "HoldingRegister",
+    "Offset": "6010",
+    "IsValid": "True"
+  }
+},
+  "Address": "406011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLCat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406013",
+    "AddressType": "HoldingRegister",
+    "Offset": "6012",
+    "IsValid": "True"
+  }
+},
+  "Address": "406013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Pallet1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406015",
+    "AddressType": "HoldingRegister",
+    "Offset": "6014",
+    "IsValid": "True"
+  }
+},
+  "Address": "406015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406017",
+    "AddressType": "HoldingRegister",
+    "Offset": "6016",
+    "IsValid": "True"
+  }
+},
+  "Address": "406017",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DaiCat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3031332+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406019",
+    "AddressType": "HoldingRegister",
+    "Offset": "6018",
+    "IsValid": "True"
+  }
+},
+  "Address": "406019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLCat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406021",
+    "AddressType": "HoldingRegister",
+    "Offset": "6020",
+    "IsValid": "True"
+  }
+},
+  "Address": "406021",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Pallet2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406023",
+    "AddressType": "HoldingRegister",
+    "Offset": "6022",
+    "IsValid": "True"
+  }
+},
+  "Address": "406023",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406025",
+    "AddressType": "HoldingRegister",
+    "Offset": "6024",
+    "IsValid": "True"
+  }
+},
+  "Address": "406025",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DaiCat3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406027",
+    "AddressType": "HoldingRegister",
+    "Offset": "6026",
+    "IsValid": "True"
+  }
+},
+  "Address": "406027",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLCat3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3036334+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406029",
+    "AddressType": "HoldingRegister",
+    "Offset": "6028",
+    "IsValid": "True"
+  }
+},
+  "Address": "406029",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Pallet3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406031",
+    "AddressType": "HoldingRegister",
+    "Offset": "6030",
+    "IsValid": "True"
+  }
+},
+  "Address": "406031",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLDat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406033",
+    "AddressType": "HoldingRegister",
+    "Offset": "6032",
+    "IsValid": "True"
+  }
+},
+  "Address": "406033",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SLLoi",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406035",
+    "AddressType": "HoldingRegister",
+    "Offset": "6034",
+    "IsValid": "True"
+  }
+},
+  "Address": "406035",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406037",
+    "AddressType": "HoldingRegister",
+    "Offset": "6036",
+    "IsValid": "True"
+  }
+},
+  "Address": "406037",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDo",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406039",
+    "AddressType": "HoldingRegister",
+    "Offset": "6038",
+    "IsValid": "True"
+  }
+},
+  "Address": "406039",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3041337+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406043",
+    "AddressType": "HoldingRegister",
+    "Offset": "6042",
+    "IsValid": "True"
+  }
+},
+  "Address": "406043",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CheDoChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406045",
+    "AddressType": "HoldingRegister",
+    "Offset": "6044",
+    "IsValid": "True"
+  }
+},
+  "Address": "406045",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406044",
+    "AddressType": "HoldingRegister",
+    "Offset": "6043",
+    "IsValid": "True"
+  }
+},
+  "Address": "406044",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406051",
+    "AddressType": "HoldingRegister",
+    "Offset": "6050",
+    "IsValid": "True"
+  }
+},
+  "Address": "406051",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406052",
+    "AddressType": "HoldingRegister",
+    "Offset": "6051",
+    "IsValid": "True"
+  }
+},
+  "Address": "406052",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406053",
+    "AddressType": "HoldingRegister",
+    "Offset": "6052",
+    "IsValid": "True"
+  }
+},
+  "Address": "406053",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting4",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406054",
+    "AddressType": "HoldingRegister",
+    "Offset": "6053",
+    "IsValid": "True"
+  }
+},
+  "Address": "406054",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting5",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3046343+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406055",
+    "AddressType": "HoldingRegister",
+    "Offset": "6054",
+    "IsValid": "True"
+  }
+},
+  "Address": "406055",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting6",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406056",
+    "AddressType": "HoldingRegister",
+    "Offset": "6055",
+    "IsValid": "True"
+  }
+},
+  "Address": "406056",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting7",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406057",
+    "AddressType": "HoldingRegister",
+    "Offset": "6056",
+    "IsValid": "True"
+  }
+},
+  "Address": "406057",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting8",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406058",
+    "AddressType": "HoldingRegister",
+    "Offset": "6057",
+    "IsValid": "True"
+  }
+},
+  "Address": "406058",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting9",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406059",
+    "AddressType": "HoldingRegister",
+    "Offset": "6058",
+    "IsValid": "True"
+  }
+},
+  "Address": "406059",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting10",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ModifiedDate": "2020-10-08T15:52:07.3051345+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406060",
+    "AddressType": "HoldingRegister",
+    "Offset": "6059",
+    "IsValid": "True"
+  }
+},
+  "Address": "406060",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+},
+    {
+  "Name": "SongE",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:17.3899618+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "192.168.1.3",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "3",
+    "UnitId": "1",
+    "ScanRate": "10",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-401001-401031|True-406001-406061"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "ChieuDaiMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.706036+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.706036+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406023",
+    "AddressType": "HoldingRegister",
+    "Offset": "6022",
+    "IsValid": "True"
+  }
+},
+  "Address": "406023",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406019",
+    "AddressType": "HoldingRegister",
+    "Offset": "6018",
+    "IsValid": "True"
+  }
+},
+  "Address": "406019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406015",
+    "AddressType": "HoldingRegister",
+    "Offset": "6014",
+    "IsValid": "True"
+  }
+},
+  "Address": "406015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406039",
+    "AddressType": "HoldingRegister",
+    "Offset": "6038",
+    "IsValid": "True"
+  }
+},
+  "Address": "406039",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406043",
+    "AddressType": "HoldingRegister",
+    "Offset": "6042",
+    "IsValid": "True"
+  }
+},
+  "Address": "406043",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406041",
+    "AddressType": "HoldingRegister",
+    "Offset": "6040",
+    "IsValid": "True"
+  }
+},
+  "Address": "406041",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406005",
+    "AddressType": "HoldingRegister",
+    "Offset": "6004",
+    "IsValid": "True"
+  }
+},
+  "Address": "406005",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSongChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406009",
+    "AddressType": "HoldingRegister",
+    "Offset": "6008",
+    "IsValid": "True"
+  }
+},
+  "Address": "406009",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6006",
+    "IsValid": "True"
+  }
+},
+  "Address": "406007",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406037",
+    "AddressType": "HoldingRegister",
+    "Offset": "6036",
+    "IsValid": "True"
+  }
+},
+  "Address": "406037",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406033",
+    "AddressType": "HoldingRegister",
+    "Offset": "6032",
+    "IsValid": "True"
+  }
+},
+  "Address": "406033",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7070368+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406029",
+    "AddressType": "HoldingRegister",
+    "Offset": "6028",
+    "IsValid": "True"
+  }
+},
+  "Address": "406029",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406027",
+    "AddressType": "HoldingRegister",
+    "Offset": "6026",
+    "IsValid": "True"
+  }
+},
+  "Address": "406027",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406031",
+    "AddressType": "HoldingRegister",
+    "Offset": "6030",
+    "IsValid": "True"
+  }
+},
+  "Address": "406031",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406035",
+    "AddressType": "HoldingRegister",
+    "Offset": "6034",
+    "IsValid": "True"
+  }
+},
+  "Address": "406035",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406011",
+    "AddressType": "HoldingRegister",
+    "Offset": "6010",
+    "IsValid": "True"
+  }
+},
+  "Address": "406011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406013",
+    "AddressType": "HoldingRegister",
+    "Offset": "6012",
+    "IsValid": "True"
+  }
+},
+  "Address": "406013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406001",
+    "AddressType": "HoldingRegister",
+    "Offset": "6000",
+    "IsValid": "True"
+  }
+},
+  "Address": "406001",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406003",
+    "AddressType": "HoldingRegister",
+    "Offset": "6002",
+    "IsValid": "True"
+  }
+},
+  "Address": "406003",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "HeSoSong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406051",
+    "AddressType": "HoldingRegister",
+    "Offset": "6050",
+    "IsValid": "True"
+  }
+},
+  "Address": "406051",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 0.01,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406049",
+    "AddressType": "HoldingRegister",
+    "Offset": "6048",
+    "IsValid": "True"
+  }
+},
+  "Address": "406049",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406048",
+    "AddressType": "HoldingRegister",
+    "Offset": "6047",
+    "IsValid": "True"
+  }
+},
+  "Address": "406048",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406047",
+    "AddressType": "HoldingRegister",
+    "Offset": "6046",
+    "IsValid": "True"
+  }
+},
+  "Address": "406047",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoi",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406045",
+    "AddressType": "HoldingRegister",
+    "Offset": "6044",
+    "IsValid": "True"
+  }
+},
+  "Address": "406045",
+  "DataTypeName": "DWord",
+  "RefreshRate": 100,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7080373+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406052",
+    "AddressType": "HoldingRegister",
+    "Offset": "6051",
+    "IsValid": "True"
+  }
+},
+  "Address": "406052",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406053",
+    "AddressType": "HoldingRegister",
+    "Offset": "6052",
+    "IsValid": "True"
+  }
+},
+  "Address": "406053",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406054",
+    "AddressType": "HoldingRegister",
+    "Offset": "6053",
+    "IsValid": "True"
+  }
+},
+  "Address": "406054",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting4",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406055",
+    "AddressType": "HoldingRegister",
+    "Offset": "6054",
+    "IsValid": "True"
+  }
+},
+  "Address": "406055",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting5",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406056",
+    "AddressType": "HoldingRegister",
+    "Offset": "6055",
+    "IsValid": "True"
+  }
+},
+  "Address": "406056",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting6",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406057",
+    "AddressType": "HoldingRegister",
+    "Offset": "6056",
+    "IsValid": "True"
+  }
+},
+  "Address": "406057",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting7",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406058",
+    "AddressType": "HoldingRegister",
+    "Offset": "6057",
+    "IsValid": "True"
+  }
+},
+  "Address": "406058",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting8",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406059",
+    "AddressType": "HoldingRegister",
+    "Offset": "6058",
+    "IsValid": "True"
+  }
+},
+  "Address": "406059",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting9",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406060",
+    "AddressType": "HoldingRegister",
+    "Offset": "6059",
+    "IsValid": "True"
+  }
+},
+  "Address": "406060",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401001",
+    "AddressType": "HoldingRegister",
+    "Offset": "1000",
+    "IsValid": "True"
+  }
+},
+  "Address": "401001",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDo",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401003",
+    "AddressType": "HoldingRegister",
+    "Offset": "1002",
+    "IsValid": "True"
+  }
+},
+  "Address": "401003",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401011",
+    "AddressType": "HoldingRegister",
+    "Offset": "1010",
+    "IsValid": "True"
+  }
+},
+  "Address": "401011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dan",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401013",
+    "AddressType": "HoldingRegister",
+    "Offset": "1012",
+    "IsValid": "True"
+  }
+},
+  "Address": "401013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7090378+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401015",
+    "AddressType": "HoldingRegister",
+    "Offset": "1014",
+    "IsValid": "True"
+  }
+},
+  "Address": "401015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401025",
+    "AddressType": "HoldingRegister",
+    "Offset": "1024",
+    "IsValid": "True"
+  }
+},
+  "Address": "401025",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiKiemTra",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401019",
+    "AddressType": "HoldingRegister",
+    "Offset": "1018",
+    "IsValid": "True"
+  }
+},
+  "Address": "401019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoKiemTraChieuDai",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401021",
+    "AddressType": "HoldingRegister",
+    "Offset": "1020",
+    "IsValid": "True"
+  }
+},
+  "Address": "401021",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoBaoChuanBiGiay",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ModifiedDate": "2020-10-08T15:53:27.7100387+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401031",
+    "AddressType": "HoldingRegister",
+    "Offset": "1030",
+    "IsValid": "True"
+  }
+},
+  "Address": "401031",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+},
+    {
+  "Name": "SongB",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:44.5371256+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "127.0.0.1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "3",
+    "UnitId": "3",
+    "ScanRate": "10",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-401001-401031|True-406001-406061"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "ChieuDaiMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8925452+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8925452+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406023",
+    "AddressType": "HoldingRegister",
+    "Offset": "6022",
+    "IsValid": "True"
+  }
+},
+  "Address": "406023",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406019",
+    "AddressType": "HoldingRegister",
+    "Offset": "6018",
+    "IsValid": "True"
+  }
+},
+  "Address": "406019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406015",
+    "AddressType": "HoldingRegister",
+    "Offset": "6014",
+    "IsValid": "True"
+  }
+},
+  "Address": "406015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8965479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406039",
+    "AddressType": "HoldingRegister",
+    "Offset": "6038",
+    "IsValid": "True"
+  }
+},
+  "Address": "406039",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406043",
+    "AddressType": "HoldingRegister",
+    "Offset": "6042",
+    "IsValid": "True"
+  }
+},
+  "Address": "406043",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406041",
+    "AddressType": "HoldingRegister",
+    "Offset": "6040",
+    "IsValid": "True"
+  }
+},
+  "Address": "406041",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406005",
+    "AddressType": "HoldingRegister",
+    "Offset": "6004",
+    "IsValid": "True"
+  }
+},
+  "Address": "406005",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSongChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8975487+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406009",
+    "AddressType": "HoldingRegister",
+    "Offset": "6008",
+    "IsValid": "True"
+  }
+},
+  "Address": "406009",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6006",
+    "IsValid": "True"
+  }
+},
+  "Address": "406007",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406037",
+    "AddressType": "HoldingRegister",
+    "Offset": "6036",
+    "IsValid": "True"
+  }
+},
+  "Address": "406037",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8985495+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406033",
+    "AddressType": "HoldingRegister",
+    "Offset": "6032",
+    "IsValid": "True"
+  }
+},
+  "Address": "406033",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406029",
+    "AddressType": "HoldingRegister",
+    "Offset": "6028",
+    "IsValid": "True"
+  }
+},
+  "Address": "406029",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406027",
+    "AddressType": "HoldingRegister",
+    "Offset": "6026",
+    "IsValid": "True"
+  }
+},
+  "Address": "406027",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406031",
+    "AddressType": "HoldingRegister",
+    "Offset": "6030",
+    "IsValid": "True"
+  }
+},
+  "Address": "406031",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406035",
+    "AddressType": "HoldingRegister",
+    "Offset": "6034",
+    "IsValid": "True"
+  }
+},
+  "Address": "406035",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.8995497+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406011",
+    "AddressType": "HoldingRegister",
+    "Offset": "6010",
+    "IsValid": "True"
+  }
+},
+  "Address": "406011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406013",
+    "AddressType": "HoldingRegister",
+    "Offset": "6012",
+    "IsValid": "True"
+  }
+},
+  "Address": "406013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406001",
+    "AddressType": "HoldingRegister",
+    "Offset": "6000",
+    "IsValid": "True"
+  }
+},
+  "Address": "406001",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406003",
+    "AddressType": "HoldingRegister",
+    "Offset": "6002",
+    "IsValid": "True"
+  }
+},
+  "Address": "406003",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "HeSoSong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406051",
+    "AddressType": "HoldingRegister",
+    "Offset": "6050",
+    "IsValid": "True"
+  }
+},
+  "Address": "406051",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 0.01,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9005502+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406049",
+    "AddressType": "HoldingRegister",
+    "Offset": "6048",
+    "IsValid": "True"
+  }
+},
+  "Address": "406049",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406048",
+    "AddressType": "HoldingRegister",
+    "Offset": "6047",
+    "IsValid": "True"
+  }
+},
+  "Address": "406048",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406047",
+    "AddressType": "HoldingRegister",
+    "Offset": "6046",
+    "IsValid": "True"
+  }
+},
+  "Address": "406047",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoi",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406045",
+    "AddressType": "HoldingRegister",
+    "Offset": "6044",
+    "IsValid": "True"
+  }
+},
+  "Address": "406045",
+  "DataTypeName": "DWord",
+  "RefreshRate": 100,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406052",
+    "AddressType": "HoldingRegister",
+    "Offset": "6051",
+    "IsValid": "True"
+  }
+},
+  "Address": "406052",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9015511+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406053",
+    "AddressType": "HoldingRegister",
+    "Offset": "6052",
+    "IsValid": "True"
+  }
+},
+  "Address": "406053",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406054",
+    "AddressType": "HoldingRegister",
+    "Offset": "6053",
+    "IsValid": "True"
+  }
+},
+  "Address": "406054",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting4",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406055",
+    "AddressType": "HoldingRegister",
+    "Offset": "6054",
+    "IsValid": "True"
+  }
+},
+  "Address": "406055",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting5",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406056",
+    "AddressType": "HoldingRegister",
+    "Offset": "6055",
+    "IsValid": "True"
+  }
+},
+  "Address": "406056",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting6",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406057",
+    "AddressType": "HoldingRegister",
+    "Offset": "6056",
+    "IsValid": "True"
+  }
+},
+  "Address": "406057",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting7",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9025516+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406058",
+    "AddressType": "HoldingRegister",
+    "Offset": "6057",
+    "IsValid": "True"
+  }
+},
+  "Address": "406058",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting8",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406059",
+    "AddressType": "HoldingRegister",
+    "Offset": "6058",
+    "IsValid": "True"
+  }
+},
+  "Address": "406059",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting9",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406060",
+    "AddressType": "HoldingRegister",
+    "Offset": "6059",
+    "IsValid": "True"
+  }
+},
+  "Address": "406060",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401001",
+    "AddressType": "HoldingRegister",
+    "Offset": "1000",
+    "IsValid": "True"
+  }
+},
+  "Address": "401001",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDo",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401003",
+    "AddressType": "HoldingRegister",
+    "Offset": "1002",
+    "IsValid": "True"
+  }
+},
+  "Address": "401003",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9035527+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401011",
+    "AddressType": "HoldingRegister",
+    "Offset": "1010",
+    "IsValid": "True"
+  }
+},
+  "Address": "401011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dan",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401013",
+    "AddressType": "HoldingRegister",
+    "Offset": "1012",
+    "IsValid": "True"
+  }
+},
+  "Address": "401013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401015",
+    "AddressType": "HoldingRegister",
+    "Offset": "1014",
+    "IsValid": "True"
+  }
+},
+  "Address": "401015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401025",
+    "AddressType": "HoldingRegister",
+    "Offset": "1024",
+    "IsValid": "True"
+  }
+},
+  "Address": "401025",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiKiemTra",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401019",
+    "AddressType": "HoldingRegister",
+    "Offset": "1018",
+    "IsValid": "True"
+  }
+},
+  "Address": "401019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoKiemTraChieuDai",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9045532+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401021",
+    "AddressType": "HoldingRegister",
+    "Offset": "1020",
+    "IsValid": "True"
+  }
+},
+  "Address": "401021",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoBaoChuanBiGiay",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:14.9055537+07:00",
+  "ModifiedDate": "2020-10-08T15:54:14.9055537+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401031",
+    "AddressType": "HoldingRegister",
+    "Offset": "1030",
+    "IsValid": "True"
+  }
+},
+  "Address": "401031",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+},
+    {
+  "Name": "SongC",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:53:57.0256278+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "127.0.0.1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "3",
+    "UnitId": "4",
+    "ScanRate": "10",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-401001-401031|True-406001-406061"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "ChieuDaiMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0673881+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0678903+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406023",
+    "AddressType": "HoldingRegister",
+    "Offset": "6022",
+    "IsValid": "True"
+  }
+},
+  "Address": "406023",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0678903+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0678903+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406019",
+    "AddressType": "HoldingRegister",
+    "Offset": "6018",
+    "IsValid": "True"
+  }
+},
+  "Address": "406019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406015",
+    "AddressType": "HoldingRegister",
+    "Offset": "6014",
+    "IsValid": "True"
+  }
+},
+  "Address": "406015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406039",
+    "AddressType": "HoldingRegister",
+    "Offset": "6038",
+    "IsValid": "True"
+  }
+},
+  "Address": "406039",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0683905+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406043",
+    "AddressType": "HoldingRegister",
+    "Offset": "6042",
+    "IsValid": "True"
+  }
+},
+  "Address": "406043",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0688908+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0688908+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406041",
+    "AddressType": "HoldingRegister",
+    "Offset": "6040",
+    "IsValid": "True"
+  }
+},
+  "Address": "406041",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0688908+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0688908+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406005",
+    "AddressType": "HoldingRegister",
+    "Offset": "6004",
+    "IsValid": "True"
+  }
+},
+  "Address": "406005",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSongChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406009",
+    "AddressType": "HoldingRegister",
+    "Offset": "6008",
+    "IsValid": "True"
+  }
+},
+  "Address": "406009",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6006",
+    "IsValid": "True"
+  }
+},
+  "Address": "406007",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0693911+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406037",
+    "AddressType": "HoldingRegister",
+    "Offset": "6036",
+    "IsValid": "True"
+  }
+},
+  "Address": "406037",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0698913+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0698913+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406033",
+    "AddressType": "HoldingRegister",
+    "Offset": "6032",
+    "IsValid": "True"
+  }
+},
+  "Address": "406033",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0698913+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0698913+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406029",
+    "AddressType": "HoldingRegister",
+    "Offset": "6028",
+    "IsValid": "True"
+  }
+},
+  "Address": "406029",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406027",
+    "AddressType": "HoldingRegister",
+    "Offset": "6026",
+    "IsValid": "True"
+  }
+},
+  "Address": "406027",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406031",
+    "AddressType": "HoldingRegister",
+    "Offset": "6030",
+    "IsValid": "True"
+  }
+},
+  "Address": "406031",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406035",
+    "AddressType": "HoldingRegister",
+    "Offset": "6034",
+    "IsValid": "True"
+  }
+},
+  "Address": "406035",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406011",
+    "AddressType": "HoldingRegister",
+    "Offset": "6010",
+    "IsValid": "True"
+  }
+},
+  "Address": "406011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0703939+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406013",
+    "AddressType": "HoldingRegister",
+    "Offset": "6012",
+    "IsValid": "True"
+  }
+},
+  "Address": "406013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406001",
+    "AddressType": "HoldingRegister",
+    "Offset": "6000",
+    "IsValid": "True"
+  }
+},
+  "Address": "406001",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406003",
+    "AddressType": "HoldingRegister",
+    "Offset": "6002",
+    "IsValid": "True"
+  }
+},
+  "Address": "406003",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "HeSoSong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406051",
+    "AddressType": "HoldingRegister",
+    "Offset": "6050",
+    "IsValid": "True"
+  }
+},
+  "Address": "406051",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 0.01,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406049",
+    "AddressType": "HoldingRegister",
+    "Offset": "6048",
+    "IsValid": "True"
+  }
+},
+  "Address": "406049",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0713957+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406048",
+    "AddressType": "HoldingRegister",
+    "Offset": "6047",
+    "IsValid": "True"
+  }
+},
+  "Address": "406048",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406047",
+    "AddressType": "HoldingRegister",
+    "Offset": "6046",
+    "IsValid": "True"
+  }
+},
+  "Address": "406047",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoi",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406045",
+    "AddressType": "HoldingRegister",
+    "Offset": "6044",
+    "IsValid": "True"
+  }
+},
+  "Address": "406045",
+  "DataTypeName": "DWord",
+  "RefreshRate": 100,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406052",
+    "AddressType": "HoldingRegister",
+    "Offset": "6051",
+    "IsValid": "True"
+  }
+},
+  "Address": "406052",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406053",
+    "AddressType": "HoldingRegister",
+    "Offset": "6052",
+    "IsValid": "True"
+  }
+},
+  "Address": "406053",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406054",
+    "AddressType": "HoldingRegister",
+    "Offset": "6053",
+    "IsValid": "True"
+  }
+},
+  "Address": "406054",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting4",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0723969+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406055",
+    "AddressType": "HoldingRegister",
+    "Offset": "6054",
+    "IsValid": "True"
+  }
+},
+  "Address": "406055",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting5",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.073397+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.073397+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406056",
+    "AddressType": "HoldingRegister",
+    "Offset": "6055",
+    "IsValid": "True"
+  }
+},
+  "Address": "406056",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting6",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406057",
+    "AddressType": "HoldingRegister",
+    "Offset": "6056",
+    "IsValid": "True"
+  }
+},
+  "Address": "406057",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting7",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406058",
+    "AddressType": "HoldingRegister",
+    "Offset": "6057",
+    "IsValid": "True"
+  }
+},
+  "Address": "406058",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting8",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0854054+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406059",
+    "AddressType": "HoldingRegister",
+    "Offset": "6058",
+    "IsValid": "True"
+  }
+},
+  "Address": "406059",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting9",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406060",
+    "AddressType": "HoldingRegister",
+    "Offset": "6059",
+    "IsValid": "True"
+  }
+},
+  "Address": "406060",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401001",
+    "AddressType": "HoldingRegister",
+    "Offset": "1000",
+    "IsValid": "True"
+  }
+},
+  "Address": "401001",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDo",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401003",
+    "AddressType": "HoldingRegister",
+    "Offset": "1002",
+    "IsValid": "True"
+  }
+},
+  "Address": "401003",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401011",
+    "AddressType": "HoldingRegister",
+    "Offset": "1010",
+    "IsValid": "True"
+  }
+},
+  "Address": "401011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dan",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0864059+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401013",
+    "AddressType": "HoldingRegister",
+    "Offset": "1012",
+    "IsValid": "True"
+  }
+},
+  "Address": "401013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401015",
+    "AddressType": "HoldingRegister",
+    "Offset": "1014",
+    "IsValid": "True"
+  }
+},
+  "Address": "401015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401025",
+    "AddressType": "HoldingRegister",
+    "Offset": "1024",
+    "IsValid": "True"
+  }
+},
+  "Address": "401025",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiKiemTra",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401019",
+    "AddressType": "HoldingRegister",
+    "Offset": "1018",
+    "IsValid": "True"
+  }
+},
+  "Address": "401019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoKiemTraChieuDai",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401021",
+    "AddressType": "HoldingRegister",
+    "Offset": "1020",
+    "IsValid": "True"
+  }
+},
+  "Address": "401021",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoBaoChuanBiGiay",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ModifiedDate": "2020-10-08T15:54:35.0874067+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401031",
+    "AddressType": "HoldingRegister",
+    "Offset": "1030",
+    "IsValid": "True"
+  }
+},
+  "Address": "401031",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+},
+    {
+  "Name": "MayMen",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:07.8084724+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "127.0.0.1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "3",
+    "UnitId": "5",
+    "ScanRate": "10",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-401001-401031|True-406001-406061"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "ChieuDaiMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406023",
+    "AddressType": "HoldingRegister",
+    "Offset": "6022",
+    "IsValid": "True"
+  }
+},
+  "Address": "406023",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406019",
+    "AddressType": "HoldingRegister",
+    "Offset": "6018",
+    "IsValid": "True"
+  }
+},
+  "Address": "406019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406015",
+    "AddressType": "HoldingRegister",
+    "Offset": "6014",
+    "IsValid": "True"
+  }
+},
+  "Address": "406015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0166448+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406039",
+    "AddressType": "HoldingRegister",
+    "Offset": "6038",
+    "IsValid": "True"
+  }
+},
+  "Address": "406039",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406043",
+    "AddressType": "HoldingRegister",
+    "Offset": "6042",
+    "IsValid": "True"
+  }
+},
+  "Address": "406043",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406041",
+    "AddressType": "HoldingRegister",
+    "Offset": "6040",
+    "IsValid": "True"
+  }
+},
+  "Address": "406041",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406005",
+    "AddressType": "HoldingRegister",
+    "Offset": "6004",
+    "IsValid": "True"
+  }
+},
+  "Address": "406005",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSongChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406009",
+    "AddressType": "HoldingRegister",
+    "Offset": "6008",
+    "IsValid": "True"
+  }
+},
+  "Address": "406009",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMatChot",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0176456+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6006",
+    "IsValid": "True"
+  }
+},
+  "Address": "406007",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406037",
+    "AddressType": "HoldingRegister",
+    "Offset": "6036",
+    "IsValid": "True"
+  }
+},
+  "Address": "406037",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406033",
+    "AddressType": "HoldingRegister",
+    "Offset": "6032",
+    "IsValid": "True"
+  }
+},
+  "Address": "406033",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiDon2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406029",
+    "AddressType": "HoldingRegister",
+    "Offset": "6028",
+    "IsValid": "True"
+  }
+},
+  "Address": "406029",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STT2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406027",
+    "AddressType": "HoldingRegister",
+    "Offset": "6026",
+    "IsValid": "True"
+  }
+},
+  "Address": "406027",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTSong2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0186461+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406031",
+    "AddressType": "HoldingRegister",
+    "Offset": "6030",
+    "IsValid": "True"
+  }
+},
+  "Address": "406031",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "STTMat2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406035",
+    "AddressType": "HoldingRegister",
+    "Offset": "6034",
+    "IsValid": "True"
+  }
+},
+  "Address": "406035",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406011",
+    "AddressType": "HoldingRegister",
+    "Offset": "6010",
+    "IsValid": "True"
+  }
+},
+  "Address": "406011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406013",
+    "AddressType": "HoldingRegister",
+    "Offset": "6012",
+    "IsValid": "True"
+  }
+},
+  "Address": "406013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetDatChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406001",
+    "AddressType": "HoldingRegister",
+    "Offset": "6000",
+    "IsValid": "True"
+  }
+},
+  "Address": "406001",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoiChotGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0196466+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406003",
+    "AddressType": "HoldingRegister",
+    "Offset": "6002",
+    "IsValid": "True"
+  }
+},
+  "Address": "406003",
+  "DataTypeName": "Long",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "HeSoSong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406051",
+    "AddressType": "HoldingRegister",
+    "Offset": "6050",
+    "IsValid": "True"
+  }
+},
+  "Address": "406051",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 0.01,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406049",
+    "AddressType": "HoldingRegister",
+    "Offset": "6048",
+    "IsValid": "True"
+  }
+},
+  "Address": "406049",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406048",
+    "AddressType": "HoldingRegister",
+    "Offset": "6047",
+    "IsValid": "True"
+  }
+},
+  "Address": "406048",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "LenhChuyenDonGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406047",
+    "AddressType": "HoldingRegister",
+    "Offset": "6046",
+    "IsValid": "True"
+  }
+},
+  "Address": "406047",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoMetLoi",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0206474+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406045",
+    "AddressType": "HoldingRegister",
+    "Offset": "6044",
+    "IsValid": "True"
+  }
+},
+  "Address": "406045",
+  "DataTypeName": "DWord",
+  "RefreshRate": 100,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting1",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406052",
+    "AddressType": "HoldingRegister",
+    "Offset": "6051",
+    "IsValid": "True"
+  }
+},
+  "Address": "406052",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting2",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406053",
+    "AddressType": "HoldingRegister",
+    "Offset": "6052",
+    "IsValid": "True"
+  }
+},
+  "Address": "406053",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting3",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406054",
+    "AddressType": "HoldingRegister",
+    "Offset": "6053",
+    "IsValid": "True"
+  }
+},
+  "Address": "406054",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting4",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406055",
+    "AddressType": "HoldingRegister",
+    "Offset": "6054",
+    "IsValid": "True"
+  }
+},
+  "Address": "406055",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting5",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0216479+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406056",
+    "AddressType": "HoldingRegister",
+    "Offset": "6055",
+    "IsValid": "True"
+  }
+},
+  "Address": "406056",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting6",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406057",
+    "AddressType": "HoldingRegister",
+    "Offset": "6056",
+    "IsValid": "True"
+  }
+},
+  "Address": "406057",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting7",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406058",
+    "AddressType": "HoldingRegister",
+    "Offset": "6057",
+    "IsValid": "True"
+  }
+},
+  "Address": "406058",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting8",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0346562+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "406059",
+    "AddressType": "HoldingRegister",
+    "Offset": "6058",
+    "IsValid": "True"
+  }
+},
+  "Address": "406059",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Setting9",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "406060",
+    "AddressType": "HoldingRegister",
+    "Offset": "6059",
+    "IsValid": "True"
+  }
+},
+  "Address": "406060",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401001",
+    "AddressType": "HoldingRegister",
+    "Offset": "1000",
+    "IsValid": "True"
+  }
+},
+  "Address": "401001",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDo",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401003",
+    "AddressType": "HoldingRegister",
+    "Offset": "1002",
+    "IsValid": "True"
+  }
+},
+  "Address": "401003",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401011",
+    "AddressType": "HoldingRegister",
+    "Offset": "1010",
+    "IsValid": "True"
+  }
+},
+  "Address": "401011",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Dan",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0356573+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401013",
+    "AddressType": "HoldingRegister",
+    "Offset": "1012",
+    "IsValid": "True"
+  }
+},
+  "Address": "401013",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiaySong",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401015",
+    "AddressType": "HoldingRegister",
+    "Offset": "1014",
+    "IsValid": "True"
+  }
+},
+  "Address": "401015",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "DoiGiayMat",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401025",
+    "AddressType": "HoldingRegister",
+    "Offset": "1024",
+    "IsValid": "True"
+  }
+},
+  "Address": "401025",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "ChieuDaiKiemTra",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401019",
+    "AddressType": "HoldingRegister",
+    "Offset": "1018",
+    "IsValid": "True"
+  }
+},
+  "Address": "401019",
+  "DataTypeName": "DWord",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoKiemTraChieuDai",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401021",
+    "AddressType": "HoldingRegister",
+    "Offset": "1020",
+    "IsValid": "True"
+  }
+},
+  "Address": "401021",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CoBaoChuanBiGiay",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ModifiedDate": "2020-10-08T15:54:37.0366582+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "401031",
+    "AddressType": "HoldingRegister",
+    "Offset": "1030",
+    "IsValid": "True"
+  }
+},
+  "Address": "401031",
+  "DataTypeName": "Word",
+  "RefreshRate": 10,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+}
+  ],
+  "HaveTags": false,
+  "Tags": []
+},
+    {
+  "Name": "Led",
+  "Description": null,
+  "ItemType": "Channel",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:47:54.8071183+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusTCP Comunication Parameters",
+  "DisplayParameters": "ModbusTCP Comunication Parameters",
+  "Parameters": {
+    "Port": "5003"
+  }
+},
+  "DriverPath": "C:\\Users\\Harry\\Desktop\\Backup 12102020\\App\\Debug\\Driver\\ModbusTCP.dll",
+  "Childs": [
+    {
+  "Name": "Device",
+  "Description": null,
+  "ItemType": "Device",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:50:49.2376598+07:00",
+  "ModifiedDate": "2020-10-26T18:28:30.8570583+07:00",
+  "ParameterContainer": {
+  "DisplayName": "ModbusRTU Device Parameter",
+  "DisplayParameters": "ModbusRTU Device Parameter",
+  "Parameters": {
+    "IpAddress": "127.0.0.1",
+    "Timeout": "1000",
+    "TryReadWriteTimes": "3",
+    "DelayBetweenPool": "10",
+    "UnitId": "100",
+    "ScanRate": "2000",
+    "ReadInputContactsBlockSetting": "",
+    "ReadOutputCoilsBlockSetting": "",
+    "ReadInputRegistersBlockSetting": "",
+    "ReadHoldingRegistersBlockSetting": "True-400001-400020|True-400080-400110"
+  }
+},
+  "ByteOrder": "CDAB",
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": [
+    {
+  "Name": "PhanTram",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.37654+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.37654+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400100",
+    "AddressType": "HoldingRegister",
+    "Offset": "99",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400100",
+  "DataTypeName": "Float",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "CL",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4385044+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4385044+07:00",
+  "ParameterContainer": {
+  "DisplayName": "Tag Parameters",
+  "DisplayParameters": "Tag Parameters",
+  "Parameters": {
+    "LastAddress": "400080",
+    "AddressType": "HoldingRegister",
+    "Offset": "79",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400080",
+  "DataTypeName": "Long",
+  "RefreshRate": 100,
+  "ByteOrder": 1,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "MT",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400090",
+    "AddressType": "HoldingRegister",
+    "Offset": "89",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400090",
+  "DataTypeName": "Long",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run_min",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400003",
+    "AddressType": "HoldingRegister",
+    "Offset": "2",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400003",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Run_ss",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400004",
+    "AddressType": "HoldingRegister",
+    "Offset": "3",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400004",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Stop_min",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4435016+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400006",
+    "AddressType": "HoldingRegister",
+    "Offset": "5",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400006",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "Stop_ss",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4445008+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4445008+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400007",
+    "AddressType": "HoldingRegister",
+    "Offset": "6",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400007",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TieuDe",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400020.30",
+    "AddressType": "HoldingRegister",
+    "Offset": "19",
+    "IsValid": "True",
+    "StringLength": "30"
+  }
+},
+  "Address": "400020.30",
+  "DataTypeName": "String",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "SoLanDung",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400005",
+    "AddressType": "HoldingRegister",
+    "Offset": "4",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400005",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDoTB",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.445501+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400002",
+    "AddressType": "HoldingRegister",
+    "Offset": "1",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400002",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+},
+    {
+  "Name": "TocDoDon",
+  "Description": "",
+  "ItemType": "Tag",
+  "IsReadOnly": false,
+  "Enabled": false,
+  "CreatedDate": "2020-10-14T11:51:10.4464997+07:00",
+  "ModifiedDate": "2020-10-14T11:51:10.4464997+07:00",
+  "ParameterContainer": {
+  "DisplayName": null,
+  "DisplayParameters": null,
+  "Parameters": {
+    "LastAddress": "400001",
+    "AddressType": "HoldingRegister",
+    "Offset": "0",
+    "IsValid": "True",
+    "StringLength": "0"
+  }
+},
+  "Address": "400001",
+  "DataTypeName": "Word",
+  "RefreshRate": 100,
+  "ByteOrder": 0,
+  "AccessPermission": "ReadAndWrite",
+  "Offset": 0.0,
+  "Gain": 1.0,
+  "Childs": [],
+  "HaveTags": true,
+  "Tags": []
+}
+  ]
+}
+  ],
+  "HaveTags": false,
+  "Tags": []
+}
+  ]
+}
+  ]
+}

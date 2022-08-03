@@ -1,0 +1,94 @@
+﻿<UserControl
+    x:Class="MayCat.CaiDatKheHoLang"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCat"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Background="White"
+    FontSize="14"
+    mc:Ignorable="d">
+    <mvvm:Interaction.Behaviors>
+        <mvvm:CurrentWindowService />
+    </mvvm:Interaction.Behaviors>
+    <Grid Margin="12,0,12,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="0"
+            Style="{StaticResource HeaderGroupTextStyle}"
+            Text="Danh sách khe hở lằng" />
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,12,0,0"
+            Orientation="Horizontal">
+            <Button
+                x:Name="btnThem"
+                Width="120"
+                Height="30"
+                Command="{Binding CreateCommand}"
+                Content="Thêm (F5)"
+                Style="{StaticResource BlueButton}" />
+
+            <Button
+                x:Name="btnXoa"
+                Width="100"
+                Height="30"
+                Margin="8,0,0,0"
+                Command="{Binding DeleteCommand}"
+                Content="Xóa (Del)"
+                Style="{StaticResource BlueButton}" />
+        </StackPanel>
+
+        <DataGrid
+            Grid.Row="2"
+            Margin="0,8,0,0"
+            AlternatingRowBackground="#FFEFF5FF"
+            AutoGenerateColumns="False"
+            Background="White"
+            BorderBrush="{StaticResource GrayBorderSolidBrush}"
+            CanUserAddRows="True"
+            CanUserDeleteRows="True"
+            CanUserSortColumns="True"
+            HeadersVisibility="All"
+            ItemsSource="{Binding Source}"
+            MinColumnWidth="100"
+            RowHeaderWidth="20"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding TenSong}" Header="Sóng" />
+                <DataGridTextColumn Binding="{Binding KheHo}" Header="Khe hở lằng (mm)" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel
+            Grid.Row="3"
+            Margin="0,12,0,12"
+            Orientation="Horizontal">
+            <Button
+                x:Name="btnSave"
+                Width="100"
+                Height="30"
+                Command="{Binding SaveCommand}"
+                Content="Save (Enter)"
+                Style="{StaticResource BlueButton}" />
+
+            <Button
+                Width="100"
+                Height="30"
+                Margin="8,0,0,0"
+                Command="{Binding CancelCommand}"
+                Content="Cancel (Esc)"
+                Style="{StaticResource BlueButton}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1369 @@
+﻿<Window
+    x:Class="MayCatServer.CaiDatWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MayCatServer"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Cài đặt"
+    Width="547.833"
+    Height="368"
+    Background="#D2D2D2"
+    mc:Ignorable="d">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem x:Name="tabCutter" Header="CUTTER">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*" />
+                        <ColumnDefinition Width="141*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.ColumnSpan="2">
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1" />
+                        <TextBox
+                            x:Name="txbSettingCut1"
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingCut2"
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            x:Name="txbSettingCut3"
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingCut4"
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            x:Name="txbSettingCut5"
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingCut6"
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            x:Name="txbSettingCut7"
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingCut8"
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            x:Name="txbSettingCut9"
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingCut10"
+                            Width="120"
+                            Height="23"
+                            Margin="75,265,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="60"
+                            Height="26"
+                            Margin="10,262,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting10" />
+                        <Button
+                            x:Name="btnLuuCut"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                        <Label
+                            Margin="286,12,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét tới máy xả" />
+                        <TextBox
+                            x:Name="txbSoMetToiMayXa"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Margin="274,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét tới máy mền" />
+                        <TextBox
+                            x:Name="txbSoMetToiMayMen"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Margin="232,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Chiều dài cho phép sửa đơn" />
+                        <TextBox
+                            x:Name="txbChieuDaiChoPhepSuaDon"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabSongE" Header="MÁY SÓNG 1">
+                <Grid Background="#FFE5E5E5">
+                    <Grid>
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1" />
+                        <TextBox
+                            x:Name="txbSettingE1"
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingE2"
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            x:Name="txbSettingE3"
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingE4"
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            x:Name="txbSettingE5"
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingE6"
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            x:Name="txbSettingE7"
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingE8"
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            x:Name="txbSettingE9"
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingE10"
+                            Width="120"
+                            Height="23"
+                            Margin="75,265,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap"
+                            Visibility="Hidden" />
+                        <Label
+                            Width="60"
+                            Height="26"
+                            Margin="10,262,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting10"
+                            Visibility="Hidden" />
+                        <Label
+                            Grid.Column="1"
+                            Width="69"
+                            Height="26"
+                            Margin="322,8,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Hệ số sóng" />
+                        <TextBox
+                            x:Name="txbHeSoSongE"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="96"
+                            Height="26"
+                            Margin="295,37,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét nạp giấy" />
+                        <TextBox
+                            x:Name="txbSoMetNapGiayE"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="145"
+                            Height="26"
+                            Margin="246,63,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét báo chuẩn bị giấy" />
+                        <TextBox
+                            x:Name="txbSoMetChuanBiGiayE"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Button
+                            x:Name="btnLuuE"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem
+                x:Name="tabSongB"
+                Header="MÁY SÓNG 2"
+                Visibility="Visible">
+                <Grid Background="#FFE5E5E5">
+                    <Grid>
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1" />
+                        <TextBox
+                            x:Name="txbSettingB1"
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingB2"
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            x:Name="txbSettingB3"
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingB4"
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            x:Name="txbSettingB5"
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingB6"
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            x:Name="txbSettingB7"
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingB8"
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            x:Name="txbSettingB9"
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingB10"
+                            Width="120"
+                            Height="23"
+                            Margin="75,265,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap"
+                            Visibility="Hidden" />
+                        <Label
+                            Width="60"
+                            Height="26"
+                            Margin="10,262,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting10"
+                            Visibility="Hidden" />
+                        <Label
+                            Grid.Column="1"
+                            Width="69"
+                            Height="26"
+                            Margin="322,8,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Hệ số sóng" />
+                        <TextBox
+                            x:Name="txbHeSoSongB"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="96"
+                            Height="26"
+                            Margin="295,37,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét nạp giấy" />
+                        <TextBox
+                            x:Name="txbSoMetNapGiayB"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="145"
+                            Height="26"
+                            Margin="246,63,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét báo chuẩn bị giấy" />
+                        <TextBox
+                            x:Name="txbSoMetChuanBiGiayB"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Button
+                            x:Name="btnLuuB"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabSongC" Header="MÁY SÓNG 3">
+                <Grid Background="#FFE5E5E5">
+                    <Grid>
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1" />
+                        <TextBox
+                            x:Name="txbSettingC1"
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingC2"
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            x:Name="txbSettingC3"
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingC4"
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            x:Name="txbSettingC5"
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingC6"
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            x:Name="txbSettingC7"
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingC8"
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            x:Name="txbSettingC9"
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingC10"
+                            Width="120"
+                            Height="23"
+                            Margin="75,265,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap"
+                            Visibility="Hidden" />
+                        <Label
+                            Width="60"
+                            Height="26"
+                            Margin="10,262,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting10"
+                            Visibility="Hidden" />
+                        <Label
+                            Grid.Column="1"
+                            Width="69"
+                            Height="26"
+                            Margin="322,8,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Hệ số sóng" />
+                        <TextBox
+                            x:Name="txbHeSoSongC"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="96"
+                            Height="26"
+                            Margin="295,37,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét nạp giấy" />
+                        <TextBox
+                            x:Name="txbSoMetNapGiayC"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="145"
+                            Height="26"
+                            Margin="246,63,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét báo chuẩn bị giấy" />
+                        <TextBox
+                            x:Name="txbSoMetChuanBiGiayC"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Button
+                            x:Name="btnLuuC"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="txbMayMen" Header="MÁY MỀN">
+                <Grid Background="#FFE5E5E5">
+                    <Grid>
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1"
+                            Visibility="Hidden" />
+                        <TextBox
+                            x:Name="txbSettingMen1"
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap"
+                            Visibility="Hidden" />
+                        <TextBox
+                            x:Name="txbSettingMen2"
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            x:Name="txbSettingMen3"
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingMen4"
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            x:Name="txbSettingMen5"
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingMen6"
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            x:Name="txbSettingMen7"
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            x:Name="txbSettingMen8"
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            x:Name="txbSettingMen9"
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="69"
+                            Height="26"
+                            Margin="322,8,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Hệ số sóng" />
+                        <TextBox
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="96"
+                            Height="26"
+                            Margin="295,37,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét nạp giấy" />
+                        <TextBox
+                            x:Name="txbSoMetNapMen"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="145"
+                            Height="26"
+                            Margin="246,63,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét báo chuẩn bị giấy" />
+                        <TextBox
+                            x:Name="txbSoMetChuanBiMen"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Button
+                            x:Name="btnLuuMen"
+                            Grid.Column="1"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="tabSlitter" Header="SLITTER">
+                <Grid Background="#FFE5E5E5">
+                    <Grid>
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting1" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,13,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,41,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting2" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting3" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,69,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,97,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting4" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,122,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting5" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,153,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,150,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting6" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,178,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting7" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,181,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,209,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,206,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting8" />
+                        <Label
+                            Width="54"
+                            Height="26"
+                            Margin="16,234,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting9" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,237,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <TextBox
+                            Width="120"
+                            Height="23"
+                            Margin="75,265,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Width="60"
+                            Height="26"
+                            Margin="10,262,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Setting10" />
+                        <Label
+                            Grid.Column="1"
+                            Width="69"
+                            Height="26"
+                            Margin="322,8,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Hệ số sóng" />
+                        <TextBox
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,10,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="96"
+                            Height="26"
+                            Margin="295,37,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét nạp giấy" />
+                        <TextBox
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,38,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Label
+                            Grid.Column="1"
+                            Width="145"
+                            Height="26"
+                            Margin="246,63,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Số mét báo chuẩn bị giấy" />
+                        <TextBox
+                            Grid.Column="1"
+                            Width="120"
+                            Height="23"
+                            Margin="396,66,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Text=""
+                            TextWrapping="Wrap" />
+                        <Button
+                            Grid.Column="1"
+                            Width="120"
+                            Height="30"
+                            Margin="396,94,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Content="Lưu" />
+                    </Grid>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

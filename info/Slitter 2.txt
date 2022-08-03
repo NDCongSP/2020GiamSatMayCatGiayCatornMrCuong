@@ -1,0 +1,329 @@
+
+// test
+S1MAX = 12000
+S2MAX = 11000
+S3MAX = 10000
+S4MAX = 9000
+S1MIN = 4000
+S2MIN = 3000
+S3MIN = 2000
+S4MIN = 1000
+S1MAX = 20000
+S2MAX = 6000	
+CCMIN = 1000
+Wdiv2 = Width/2
+Wx3div2 = (Width * 3) /2
+Fx2 = Flap * 2
+
+Flap = 1Word 					// Cánh
+Height = 1Word 					// Cao
+Wide = Flap + Height + Flap 			// Rộng = Cánh + Cao + Cánh
+Wdiv2 = (Flap + Height + Flap) / 2 		// Rộng / 2
+Wx3div2 = (Flap + Height + Flap) x 3 / 2 		// Rộng x 3 / 2
+
+// SCORE GAP
+	select case Flute
+		case E
+			MSGapSV = GapE		// Giá trị GapE được Cài đặt từ App
+			break
+		case B
+			MSGapSV = GapB		
+			break
+		case C
+			MSGapSV = GapC		
+			break
+		case EB
+			MSGapSV = GapEB
+			break
+		case EC
+			MSGapSV = GapEC
+			break
+		case BC
+			MSGapSV = GapBC
+			break
+		case EBC
+			MSGapSV = GapEBC
+			break
+		case 1
+			MSGapSV = Gap1
+			break
+		case 2
+			MSGapSV = Gap2
+			break
+		case 3
+			MSGapSV = Gap3
+			break	
+	end select
+			
+// ***********************************************************
+// OUTS = 0 **************************************************
+	if CutOuts == 0 then
+		// Slitter
+		SL1SV = 0
+		SL2SV = 0
+		SL3SV = 0
+		SL4SV = 0
+		SL5SV = 0
+		// Scorrer
+		SC1SV = 0
+		SC2SV = 0
+		SC3SV = 0
+		SC4SV = 0
+		SC5SV = 0
+		SC6SV = 0
+		SC7SV = 0
+		SC8SV = 0
+		
+// ***********************************************************
+// OUTS = 1	***************************************************	
+	else if CutOuts == 1 then
+		//Slitter
+		if Wdiv2 >= S2Max then
+			S1SV = Wdiv2
+			S3SV = 0
+			S5SV = Wdiv2
+							//Stand Off Position
+			if (S2PV > (S1SV - SSMin))		 
+				S2SV = S1SV - SSMin
+			if (S4PV > (S5SV - SSMin))		 
+				S4SV = S5SV - SSMin
+		else
+			S2SV = Wdiv2
+			S3SV = 0
+			S4SV = Wdiv2
+							//Stand Off Position
+			if (S1PV < (S2SV + SSMin))		 
+				S1SV = S2SV + SSMin
+			if (S5PV < (S4SV + SSMin))		 
+				S5SV = S4SV + SSMin
+		end if
+			
+		//scrap
+			ScrapSV = Wdiv2
+			
+		//SCORRER CACULATE RESET
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0
+		if Flute == 0 then
+			// SCORRER NOT USED
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0			
+		else
+			// SCORRER USED
+			L4SET = Wdiv2 - Flap
+			L5SET = Flap + Height - Wdiv2
+
+			// OS
+			if (L4SET >= 0) & (L4SET < C4MAX) then
+				C4SV = L4SET					
+			else (L4SET >= C2MIN) & (L4SET < C2MAX) then
+				C2SV = L4SET
+			end if
+
+			// DS
+			if (L5SET >= 0) & (L5SET < C5MAX) then
+				C5SV = L5SET
+
+			else (L5SET >= C7MIN) & (L5SET < C7MAX) then
+				C7SV = L5SET
+			end if
+		end if
+		
+// ***********************************************************
+// OUTS = 2	***************************************************		
+	else if CutOuts == 2 then
+
+		//Slitter
+		if Wdiv2 >= S2Max then
+			S1SV = Wdiv2
+			S3SV = 1
+			S5SV = Wdiv2
+							//Stand Off Position
+			if (S2PV > (S1SV - SSMin))		 
+				S2SV = S1SV - SSMin
+			end if
+
+			if (S4PV > (S5SV - SSMin))		 
+				S4SV = S5SV - SSMin
+			end if
+
+		else
+			S2SV = Wdiv2
+			S3SV = 1
+			S4SV = Wdiv2
+							//Stand Off Position
+			if (S1PV < (S2SV + SSMin))		 
+				S1SV = S2SV + SSMin
+			end if
+
+			if (S5PV < (S4SV + SSMin))		 
+				S5SV = S4SV + SSMin
+			end if
+		end if
+			
+
+		//scrap
+			ScrapSV = Width
+			
+		//Scorer
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0
+		if Flute == 0 then
+			// NOT USED
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0			
+		else
+			// USED
+			L3SET = Width - Flap
+			L4SET = Flap
+			L5SET = Flap
+			L6SET = Flap + Height	
+			
+			//OS SCORRER
+			if (L3SET >= 0) & (L3SET < C3MAX) then
+				C3SV = L3SET					
+			else (L3SET >= C1MIN) & (L3SET < C1MAX) then
+				C1SV = L3SET
+			end if	
+
+			if (L4SET >= 0) & (L4SET < C4MAX) then
+				C4SV = L4SET					
+			else (L4SET >= C2MIN) & (L4SET < C2MAX) then
+				C2SV = L4SET
+			end if		
+
+			//DS SCORRER
+			if (L5SET >= 0) & (L5SET < C5MAX) then
+				C5SV = L5SET					
+			else (L5SET >= C7MIN) & (L5SET < C7MAX) then
+				C7SV = L5SET
+			end if	
+
+			if (L6SET >= 0) & (L6SET < C6MAX) then
+				C6SV = L6SET					
+			else (L6SET >= C8MIN) & (L6SET < C8MAX) then
+				C8SV = L6SET
+			end if		
+	
+		end if
+
+
+// ***********************************************************
+// OUTS = 3	***************************************************
+	else if CutOuts == 3 then
+		//Slitter
+			S1SV = (Width * 3) / 2
+			S2SV = Width / 2
+			S3SV = 0
+			S4SV = Width / 2
+			S5SV = (Width * 3) / 2
+				
+		//Scrap
+			ScrapSV = (Width * 3) / 2
+			
+		//Scorer
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0
+		if Flute == 0 then
+			// NOT USED
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0			
+		else
+			// USED			
+			L2SET = Wx3div2 - Flap
+			L3SET = Wdiv2 + Flap
+			L4SET = Wdiv2 - Flap
+			L5SET = Wdiv2 - Flap
+			L6SET = Wdiv2 + Flap
+			L7SET = Wx3div2 - Flap
+
+			C2SV = L2SET
+			C3SV = L3SET
+			C4SV = L4SET
+			C5SV = L5SET
+			C6SV = L6SET
+			C7SV = L7SET
+
+		end if					
+// ***********************************************************
+// OUTS = 4	***************************************************
+	else if CutOuts == 4 then
+		//Slitter
+			S1SV = Width * 2
+			S2SV = Width
+			S3SV = 1
+			S4SV = Width
+			S5SV = Width * 2
+				
+		//Scrap
+			ScrapSV = Width * 2
+			
+		//Scorer
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0
+
+		if Flute == 0 then
+			// NOT USED
+			C1SV = 0
+			C2SV = 0
+			C3SV = 0
+			C4SV = 0
+			C5SV = 0
+			C6SV = 0
+			C7SV = 0
+			C8SV = 0			
+		else
+			// USED
+			L1SET = Width + Flap + Height
+			L2SET = Width + Flap
+			L3SET = Flap + Height
+			L4SET = Flap
+			L5SET = Flap
+			L6SET = Flap + Height
+			L7SET = Width + Flap
+			L8SET = Width + Flap + Height
+		end if
+// ***********************************************************
+

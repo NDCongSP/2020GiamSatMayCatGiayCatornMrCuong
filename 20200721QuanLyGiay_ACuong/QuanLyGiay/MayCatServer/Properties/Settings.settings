@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MayCatServer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="constr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+Server=localhost;Database=cutter;Uid=root;Pwd=100100;</Value>
+    </Setting>
+    <Setting Name="port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9910</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

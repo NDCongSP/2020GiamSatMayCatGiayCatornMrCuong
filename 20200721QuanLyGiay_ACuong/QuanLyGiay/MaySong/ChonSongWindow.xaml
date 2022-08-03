@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="MaySong.ChonSongWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MaySong"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Chọn Sóng"
+    Width="301.987"
+    Height="88.493"
+    mc:Ignorable="d">
+    <Grid>
+        <ComboBox
+            x:Name="cobSong"
+            Width="200"
+            Margin="10,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <Button
+            x:Name="btnSave"
+            Width="70"
+            Height="22"
+            Margin="215,18,0,17"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Content="Save" />
+    </Grid>
+</Window>

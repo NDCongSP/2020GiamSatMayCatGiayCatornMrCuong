@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MayCat.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Id_May1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Id_May2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="IpAddress_May1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.4</Value>
+    </Setting>
+    <Setting Name="IpAddress_May2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.5</Value>
+    </Setting>
+    <Setting Name="ChoPhepChayMay1" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ChoPhepChayMay2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Modbus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TCP</Value>
+    </Setting>
+    <Setting Name="CauHinhRTU1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM3.9600.8.E.1</Value>
+    </Setting>
+    <Setting Name="CauHinhRTU2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1.9600.8.E.1</Value>
+    </Setting>
+    <Setting Name="NguonDonHang" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Đơn hàng tay</Value>
+    </Setting>
+    <Setting Name="constr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+Server=localhost;Database=cutter;Uid=root;Pwd=100100;</Value>
+    </Setting>
+    <Setting Name="TuDongChuyenDon" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
